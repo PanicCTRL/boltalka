@@ -1,0 +1,7 @@
+Found 6 results
+STRG/__pycache__/fractal_zigzag.cpython-312.pyc
+STRG/fractal_zigzag.py
+sf_zigzag.lua
+sf_zigzag_test.lua
+test_programs/zigzag.lua
+true_fractal/fractal_zigzag.lua

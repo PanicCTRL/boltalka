@@ -1,0 +1,29 @@
+
+The command exited with code 0.
+Output:
+
+Path                             LineNumber Line                                                                      
+----                             ---------- ----                                                                      
+Y:\true_fractal\true_fractal.lua          1 -- ������� ������ ������ -- true_fractal.lua                              
+Y:\true_fractal\true_fractal.lua         27 fractals     = {}    -- ������� ��������� ��������� 6 ���������           
+Y:\true_fractal\true_fractal.lua         34 lastFractal  = 0                                                          
+Y:\true_fractal\true_fractal.lua         84 	error("TrueFractal: �� ������� �������� SEC_PRICE_STEP ��� " .. sec_code)
+Y:\true_fractal\true_fractal.lua        172     if prevPrice == 0 or #fractals == 0 then return end                   
+Y:\true_fractal\true_fractal.lua        180     for i = 1, #fractals do                                               
+Y:\true_fractal\true_fractal.lua        181         local f = fractals[i]                                             
+Y:\true_fractal\true_fractal.lua        186             if f ~= lastFractal and not opn and not virt then             
+Y:\true_fractal\true_fractal.lua        189                 lastFractal = f                                           
+Y:\true_fractal\true_fractal.lua        283     fractals = Read_frc(file)                                             
+Y:\true_fractal\true_fractal.lua        284     if #fractals > 0 then LogStartFractals() end                          
+Y:\true_fractal\true_fractal.lua        296             GetFractal()                                                  
+Y:\true_fractal\true_fractal.lua        300             local fracStr = table.concat(fractals, ", ")                  
+Y:\true_fractal\true_fractal.lua        302             frc_value = table.concat(fractals, " ")                       
+Y:\true_fractal\true_fractal.lua        303             if #fractals > 0 then                                         
+Y:\true_fractal\true_fractal.lua        304                 FractalTransfer(frc_value)                                
+Y:\my_fractal\my_fractal.lua              1 --my_fractal.lua                                                          
+Y:\my_fractal\my_fractal.lua             30 fractals     = {}    -- ������� ��� �������� ��������� 4 ���������        
+Y:\my_fractal\my_fractal.lua             37 lastFractal  = 0                                                          
+Y:\my_fractal\my_fractal.lua             66 dofile(getScriptPath() .. "\\fractal_logger.lua")                         
+
+
+

@@ -1,0 +1,28 @@
+
+The command exited with code 0.
+Output:
+
+> split_fractal.lua:275:function OnAllTrade(alltrade)
+  split_fractal.lua:276:    if alltrade.class_code ~= class_code or alltrade.sec_code ~= sec_code then return end
+  split_fractal.lua:277:    if not CheckTradeFreshness(alltrade) then return end
+  split_fractal.lua:278:    if alltrade.price == currentPrice then return end
+  split_fractal.lua:279:    prevPrice = currentPrice
+  split_fractal.lua:280:    currentPrice = alltrade.price
+  split_fractal.lua:281:    UpdateLimits()
+  split_fractal.lua:282:    LevelCross()
+  split_fractal.lua:283:end 
+  split_fractal.lua:284:
+  split_fractal.lua:285:function OnDisconnected()
+  split_fractal.lua:286:    message("��� ����� � ��������.", 2)
+  split_fractal.lua:287:end
+  split_fractal.lua:288:
+  split_fractal.lua:289:function OnConnected(flag)
+  split_fractal.lua:290:    message("���������� � �������� �������������.", 1)
+  split_fractal.lua:291:end
+  split_fractal.lua:292:
+  split_fractal.lua:293:function OnStop()
+  split_fractal.lua:294:    is_run = false
+  split_fractal.lua:295:    LogStop()
+
+
+

@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+true_fractal utf-8 len: 7167 contains �: False
+my_fractal cp1251 len: 30076 contains �: False
+

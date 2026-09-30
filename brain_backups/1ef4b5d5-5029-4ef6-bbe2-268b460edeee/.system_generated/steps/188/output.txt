@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+origin	https://github.com/PanicCTRL/my_fractal.git (fetch)
+origin	https://github.com/PanicCTRL/my_fractal.git (push)
+origin	https://github.com/PanicCTRL/AGENTS.git (fetch)
+origin	https://github.com/PanicCTRL/AGENTS.git (push)
+

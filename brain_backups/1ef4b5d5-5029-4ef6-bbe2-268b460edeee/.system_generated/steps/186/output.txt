@@ -1,0 +1,23 @@
+
+The command exited with code 0.
+Output:
+
+Name                          Length
+----                          ------
+fractal_zigzag.lua              6842
+frc_value.txt                     55
+mock_opening.lua               19909
+pnl_day.txt                       26
+tf_debug_log.txt               95965
+tf_killstop.lua                 1039
+tf_logger.lua                   5780
+tf_logic.lua                    1948
+tf_read_n_writers.lua           2394
+tf_sendtransaction_spbfut.lua   3260
+tf_user_log.txt                42847
+TODO_TRUE_FRACTAL.md           13405
+true_fractal.lua                9388
+true_f_formock.lua              8864
+
+
+

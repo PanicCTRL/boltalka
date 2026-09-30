@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+Cloning into 'Y:\boltalka'...
+warning: You appear to have cloned an empty repository.
+

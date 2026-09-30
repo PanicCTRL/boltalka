@@ -1,0 +1,54 @@
+
+The command exited with code 0.
+Output:
+171: function LevelCross()
+172:     if prevPrice == 0 or #fractals == 0 then return end
+173: 
+174:     virt = VirtualPos()
+175: 
+176:     if not opn and not virt and count_t == 0 and count_v == 0 then
+177:         startPrice = 0
+178:     end
+179: 
+180:     for i = 1, #fractals do
+181:         local f = fractals[i]
+182:         local crossUp   = (prevPrice < f and currentPrice >= f)
+183:         local crossDown = (prevPrice > f and currentPrice <= f)
+184: 
+185:         if crossUp or crossDown then
+186:             if f ~= lastFractal and not opn and not virt then
+187:                 LogReset(f)
+188:                 startPrice  = f
+189:                 lastFractal = f
+190:                 count_t     = count_trades
+191:                 count_v     = count_trades
+192:             end
+193: 
+194:             if f == startPrice then
+195:                 local direction = crossUp and "СНИЗУ ВВЕРХ" or "СВЕРХУ ВНИЗ"
+196:                 LogCross(f, direction)
+197: 
+198:                 if (operation == "B" and crossUp) or (operation == "S" and crossDown) then
+199:                     Trade()
+200:                 elseif (operation == "B" and crossDown) or (operation == "S" and crossUp) then
+201:                     OpenVirt()
+202:                 end
+203:             end
+204:         end
+205:     end
+206: end
+207: 
+208: function OnOrder(order)
+209: 	if order.sec_code ~= sec_code or order.class_code ~= class_code then return end
+210: 	if bit.band(order.flags, 1) ~= 0 or order.uid == 0 or order.balance ~= 0 then return end
+211: 	if order.linkedorder == 0 then	-- не стоплосс
+212: 		if not opn then				-- Позиция открыта
+213: 			if startPrice > 0 then SendBracket(sec_code, class_code) end
+214: 			up_price, low_price = 0, 0
+215: 			opn = true; pendOrder = false; pendKill = false
+216: 		else						-- Позиция закрыта пользователем
+217: 			LogManualClose(startPrice, stop_price)
+218: 			KillStop()
+219: 			startPrice, up_price, low_price, count_t = 0, 0, 0, 0
+220: 			opn = false; pendKill = false
+

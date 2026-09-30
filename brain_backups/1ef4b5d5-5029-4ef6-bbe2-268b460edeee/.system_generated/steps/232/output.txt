@@ -1,0 +1,40 @@
+
+The command exited with code 0.
+Output:
+Lines count: 313
+21: period_time  = 60    -- Время бара (1 мин = 60 сек)
+22: end_time     = 0     -- Время окончания бара
+23: file         = getScriptPath() .. "\\frc_value.txt"
+24: 
+25: maxPrices    = {}    -- Таблица максимумов последних 5 свечей
+26: minPrices    = {}    -- Таблица минимумов последних 5 свечей
+27: fractals     = {}    -- Таблица найденных последних 6 фракталов
+28: 
+29: low_price    = 0
+30: up_price     = 0
+31: currentPrice = 0
+32: prevPrice    = 0
+33: startPrice   = 0
+34: lastFractal  = 0
+35: 
+36: opn			        = false
+37: stopRpcd		    = false -- Использовать переменную в логике треилстопа когда будет добавлен.
+38: 
+39: virt                = false
+40: virt_stop           = 0
+41: virt_take           = 0
+42: 
+43: stop_price 			= 0
+44: take_price			= 0
+45: is_run              = true
+46: 
+47: orderDone           = false
+48: tradeDone           = false
+49: 
+50: avg_open   = 0
+51: avg_close  = 0
+52: open_cost  = 0
+53: open_qty   = 0
+54: close_cost = 0
+55: close_qty  = 0
+

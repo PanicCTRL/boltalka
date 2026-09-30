@@ -1,0 +1,53 @@
+
+The command exited with code 0.
+Output:
+
+  maxPrices    = {}    -- Таблица максимумов последних 5 свечей
+  minPrices    = {}    -- Таблица минимумов последних 5 свечей
+> fractals     = {}    -- Таблица найденных последних 6 фракталов
+  
+  low_price    = 0
+  end
+  
+> dofile(getScriptPath() .. "\\tf_read_n_writers.lua")
+> dofile(getScriptPath() .. "\\tf_logger.lua")
+> dofile(getScriptPath() .. "\\tf_logic.lua")
+> dofile(getScriptPath() .. "\\tf_sendtransaction_spbfut.lua")
+> dofile(getScriptPath() .. "\\tf_killstop.lua")
+> dofile("Y:\\Knowledge\\best_practices\\alltrade_reconnect_filter.lua")
+  
+  step = tonumber(getParamEx(class_code, sec_code, "SEC_PRICE_STEP").param_value)
+  end
+  
+> function LevelCross()
+>     if prevPrice == 0 or #fractals == 0 then return end
+  
+      virt = VirtualPos()
+      end
+  
+>     for i = 1, #fractals do
+>         local f = fractals[i]
+          local crossUp   = (prevPrice < f and currentPrice >= f)
+          local crossDown = (prevPrice > f and currentPrice <= f)
+      currentPrice = alltrade.price
+      UpdateLimits()
+>     LevelCross()
+  end 
+  
+      LogStart()
+      pnl_day_pts, pnl_day_steps = Read_pnl_day()
+>     fractals = Read_frc(file)
+>     if #fractals > 0 then LogStartFractals() end
+      while is_run do
+          FlushLogs()
+              local maxStr = table.concat(maxPrices, ", ")
+              local minStr = table.concat(minPrices, ", ")
+>             local fracStr = table.concat(fractals, ", ")
+              
+>             frc_value = table.concat(fractals, " ")
+>             if #fractals > 0 then
+                  FractalTransfer(frc_value)
+              end
+
+
+

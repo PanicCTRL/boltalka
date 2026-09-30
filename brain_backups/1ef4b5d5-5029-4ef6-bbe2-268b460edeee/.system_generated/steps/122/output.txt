@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+  File "<string>", line 1
+    import lupa; lua = lupa.LuaRuntime(); code1 = '''if lineStart == 0 then lineStart = openPrice message(" test\)
+                                                  ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 1)
+

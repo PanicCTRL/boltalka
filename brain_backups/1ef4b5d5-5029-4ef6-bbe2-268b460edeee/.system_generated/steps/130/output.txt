@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+Failed without semicolon: [string "<python>"]:1: attempt to call a nil value (global 'message')
+stack traceback:
+	[string "<python>"]:1: in main chunk
+

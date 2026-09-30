@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+  fractal_wrong
+  futures_trading
+  main
+  stocks_test
+* true_fractal
+  write_fractals_file
+

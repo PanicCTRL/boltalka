@@ -1,0 +1,39 @@
+
+The command exited with code 0.
+Output:
+
+Path                               LineNumber Line                                                                     
+----                               ---------- ----                                                                     
+Y:\true_fractal\fractal_zigzag.lua          1 -- fractal_zigzag.lua                                                    
+Y:\true_fractal\mock_opening.lua           62 fractals        = {}                                                     
+Y:\true_fractal\mock_opening.lua           68 lastFractalUp   = 0                                                      
+Y:\true_fractal\mock_opening.lua           69 lastFractalDown = 0                                                      
+Y:\true_fractal\mock_opening.lua          289     for i = 1, #fractals do                                              
+Y:\true_fractal\mock_opening.lua          290         if fractals[i] == levelVal then                                  
+Y:\true_fractal\mock_opening.lua          294     table.insert(fractals, levelVal)                                     
+Y:\true_fractal\mock_opening.lua          295     if #fractals > 8 then                                                
+Y:\true_fractal\mock_opening.lua          296         table.remove(fractals, 1)                                        
+Y:\true_fractal\mock_opening.lua          373 function GetFractal()                                                    
+Y:\true_fractal\mock_opening.lua          380         if fLevel ~= lastFractalUp then                                  
+Y:\true_fractal\mock_opening.lua          381             lastFractalUp = fLevel                                       
+Y:\true_fractal\mock_opening.lua          390         if fLevel ~= lastFractalDown then                                
+Y:\true_fractal\mock_opening.lua          391             lastFractalDown = fLevel                                     
+Y:\true_fractal\mock_opening.lua          481     GetFractal()                                                         
+Y:\true_fractal\tf_killstop.lua             1 -- fractal_killstop.lua                                                  
+Y:\true_fractal\tf_logger.lua               2 -- ������ �������������� ����������� ��� true_fractal.lua                
+Y:\true_fractal\tf_logger.lua              17 function LogStartFractals()                                              
+Y:\true_fractal\tf_logger.lua              18     WriteLog(user_path, "             ��������� ��������� �� �����: " ...
+Y:\true_fractal\tf_logger.lua              19     WriteLog(debug_path, "             ��������� ��������� �� �����: "...
+Y:\true_fractal\tf_logger.lua              23 function LogFractal(f, dir)                                              
+Y:\true_fractal\tf_logger.lua              24     WriteLog(debug_path, "              ������ ������� " .. (dir or "�...
+Y:\true_fractal\tf_logger.lua              33     WriteLog(debug_path, "             ����� �� ����� ������� | new_f=...
+Y:\true_fractal\tf_logger.lua              37     local fracStr = table.concat(fractals, ", ")                         
+Y:\true_fractal\tf_logger.lua              39     WriteLog(user_path, "									| fractals=[" .. fracStr .. "]", true) 
+Y:\true_fractal\tf_logic.lua                1 -- ������������ ��� fractal_wrong.lua -- fractal_logic.lua               
+Y:\true_fractal\tf_logic.lua               21 function FractalTransfer(text)                                           
+Y:\true_fractal\tf_logic.lua               44 function GetFractal()                                                    
+Y:\true_fractal\tf_logic.lua               50         table.insert(fractals, maxPrices[3])                             
+Y:\true_fractal\tf_logic.lua               51         if #fractals > 6 then                                            
+
+
+

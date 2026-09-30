@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+17: function LogStartFractals()
+18:     WriteLog(user_path, "             Загружено фракталов из файла: " .. table.concat(fractals, ", "), false)
+19:     WriteLog(debug_path, "             Загружено фракталов из файла: " .. table.concat(fractals, ", "), false)
+24:     WriteLog(debug_path, "              Найден фрактал " .. (dir or "вверх") .. " | f=" .. f .. " fractals=[" .. table.concat(fractals, ", ") .. "]", false)
+37:     local fracStr = table.concat(fractals, ", ")
+39:     WriteLog(user_path, "									| fractals=[" .. fracStr .. "]", true)
+

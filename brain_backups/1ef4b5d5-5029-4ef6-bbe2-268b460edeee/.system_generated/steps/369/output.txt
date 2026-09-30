@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+
+split_fractal.lua:76:dofile(getScriptPath() .. "\\sf_read_n_writers.lua")
+split_fractal.lua:77:dofile(getScriptPath() .. "\\sf_logger.lua")
+split_fractal.lua:78:dofile(getScriptPath() .. "\\sf_logic.lua")
+split_fractal.lua:79:dofile(getScriptPath() .. "\\sf_sendtransaction_spbfut.lua")
+split_fractal.lua:80:dofile(getScriptPath() .. "\\sf_killstop.lua")
+split_fractal.lua:81:dofile("Y:\\Knowledge\\best_practices\\alltrade_reconnect_filter.lua")
+
+
+

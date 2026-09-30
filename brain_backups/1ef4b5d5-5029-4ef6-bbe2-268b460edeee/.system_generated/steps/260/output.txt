@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+
+
+    Каталог: Y:\my_fractal
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        26.09.2026     11:08                true_fractal                                                         
+Files copied and synchronized successfully.
+
+
+

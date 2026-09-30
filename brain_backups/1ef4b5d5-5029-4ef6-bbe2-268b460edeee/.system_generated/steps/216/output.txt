@@ -1,0 +1,23 @@
+
+The command exited with code 0.
+Output:
+commit 9286038645521a1e58cd6fa6fe3d6b9f5a6d0d41
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Wed Aug 26 14:39:34 2026 +0300
+
+    feat: centralize all WriteLog calls into logger module, add actual slippage logging and explicit exit tags
+
+ fractal_logger.lua                         |  50 +-
+ fractal_sendtransaction_spbfut.lua         |  26 +-
+ my_fractal.lua                             |   2 +-
+ support_pro/callback_test.lua              | 265 ---------
+ support_pro/mock_test.html                 | 862 -----------------------------
+ support_pro/mock_test.lua                  | 346 ------------
+ true_fractal/tf_killstop.lua               |  40 --
+ true_fractal/tf_logger.lua                 |  65 ---
+ true_fractal/tf_logic.lua                  |  66 ---
+ true_fractal/tf_read_n_writers.lua         |  86 ---
+ true_fractal/tf_sendtransaction_spbfut.lua | 109 ----
+ true_fractal/true_fractal.lua              | 301 ----------
+ 12 files changed, 55 insertions(+), 2163 deletions(-)
+

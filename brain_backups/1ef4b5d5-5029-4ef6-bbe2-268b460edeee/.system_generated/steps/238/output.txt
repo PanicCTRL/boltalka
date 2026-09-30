@@ -1,0 +1,42 @@
+
+The command exited with code 0.
+Output:
+276:     FlushLogs()
+277:     return 3000
+278: end
+279: 
+280: function main()
+281:     LogStart()
+282:     pnl_day_pts, pnl_day_steps = Read_pnl_day()
+283:     fractals = Read_frc(file)
+284:     if #fractals > 0 then LogStartFractals() end
+285:     while is_run do
+286:         FlushLogs()
+287:         local rawUp   = tonumber(getParamEx(class_code, sec_code, "PRICEMAX").param_value) or 0
+288:         local rawDown = tonumber(getParamEx(class_code, sec_code, "PRICEMIN").param_value) or 0
+289: 
+290:         limitUp   = tonumber(string.format("%." .. dec .. "f", rawUp))
+291:         limitDown = tonumber(string.format("%." .. dec .. "f", rawDown))
+292: 
+293:         price_limit = (operation == "B") and limitDown or limitUp
+294:         if CheckTimer() then
+295:             PushPrice()
+296:             GetFractal()
+297:             
+298:             local maxStr = table.concat(maxPrices, ", ")
+299:             local minStr = table.concat(minPrices, ", ")
+300:             local fracStr = table.concat(fractals, ", ")
+301:             
+302:             frc_value = table.concat(fractals, " ")
+303:             if #fractals > 0 then
+304:                 FractalTransfer(frc_value)
+305:             end
+306: 
+307:             ResetLimits()
+308:         end
+309:         
+310:         FlushLogs()
+311:         sleep(5000)
+312:     end
+313: end
+

@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+  File "<string>", line 5
+    lua.execute('if lineStart == 0 then lineStart = openPrice message(" test\)
+                ^
+SyntaxError: unterminated string literal (detected at line 5)
+

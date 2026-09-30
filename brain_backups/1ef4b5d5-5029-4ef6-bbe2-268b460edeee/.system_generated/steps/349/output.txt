@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+
+split_fractal.lua:277:    if not CheckTradeFreshness(alltrade) then return end
+
+
+

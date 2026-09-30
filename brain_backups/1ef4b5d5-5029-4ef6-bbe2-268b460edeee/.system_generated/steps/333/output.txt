@@ -1,0 +1,48 @@
+
+The command exited with code 1.
+Output:
+At line:1 char:12
++ $content = @
++            ~
+Unrecognized token in source text.
+At line:5 char:2
++ - **Таймфрейм свечей**: **M5 (300 секунд)** (`period_time = 300`).
++  ~
+Missing expression after unary operator '-'.
+At line:5 char:4
++ - **Таймфрейм свечей**: **M5 (300 секунд)** (`period_time = 300`).
++    ~
+You must provide a value expression following the '*' operator.
+At line:5 char:5
++ - **Таймфрейм свечей**: **M5 (300 секунд)** (`period_time = 300`).
++     ~
+You must provide a value expression following the '*' operator.
+At line:5 char:5
++ - **Таймфрейм свечей**: **M5 (300 секунд)** (`period_time = 300`).
++     ~~~~~~~~~
+Unexpected token 'Таймфрейм' in expression or statement.
+At line:5 char:35
++ - **Таймфрейм свечей**: **M5 (300 секунд)** (`period_time = 300`).
++                                   ~~~~~~
+Unexpected token 'секунд' in expression or statement.
+At line:5 char:34
++ - **Таймфрейм свечей**: **M5 (300 секунд)** (`period_time = 300`).
++                                  ~
+Missing closing ')' in expression.
+At line:5 char:41
++ - **Таймфрейм свечей**: **M5 (300 секунд)** (`period_time = 300`).
++                                         ~
+Unexpected token ')' in expression or statement.
+At line:5 char:67
++ - **Таймфрейм свечей**: **M5 (300 секунд)** (`period_time = 300`).
++                                                                   ~
+Missing closing ')' in expression.
+At line:6 char:182
++ ... 9:00`, `09:05`, `09:10`...). Никакого плавающего времени по часам ПК!
++                                                                          ~
+Missing closing ')' in expression.
+Not all parse errors were reported.  Correct the reported errors and try again.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnrecognizedToken
+ 
+

@@ -1,0 +1,14 @@
+
+The command exited with code 0.
+Output:
+
+
+    Каталог: Y:\Knowledge\qlua_user_guide\artifacts
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        31.07.2026      7:35           8558 23_naming_conventions_and_rules.md                                   
+
+
+

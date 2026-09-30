@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+
+FullName                 LinkType Target
+--------                 -------- ------
+Y:\true_fractal                   {}    
+I:\fractals\true_fractal          {}    
+Y:\my_fractal                     {}    
+
+
+

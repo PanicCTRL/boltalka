@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+f4e13b3 feat(zigzag): dynamic active ray tracking current candle high/low in Lua
+37c69a1 feat(zigzag): implement canonical TradingView deviation zigzag in Lua
+fd58121 feat(fractal_zigzag): implement Dow macro swings collapse on Higher High / Lower Low
+3fed466 feat(fractal_zigzag): add standalone fractal zigzag module (Box 1)
+5e3c36b docs(true_fractal): add Stage 5 ZigZag and Regression Channel
+

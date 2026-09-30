@@ -1,0 +1,54 @@
+
+The command exited with code 0.
+Output:
+"""
+fractal_zigzag.py
+РњРѕРґСѓР»СЊ РІС‹С‡РёСЃР»РµРЅРёСЏ СЌС‚Р°Р»РѕРЅРЅРѕРіРѕ РєР°РЅРѕРЅРёС‡РµСЃРєРѕРіРѕ Р—РёРі-Р—Р°РіР° (TradingView Zig Zag):
+- РџРѕСЃС‚СЂРѕРµРЅРёРµ СЃРІРёРЅРіРѕРІ РїРѕ РІРµР»РёС‡РёРЅРµ РѕС‚РєР»РѕРЅРµРЅРёСЏ С†РµРЅС‹ (Deviation / Min Swing Threshold, РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ 0.9%)
+- РџСЂРѕРµРєС†РёСЏ Р°РєС‚РёРІРЅРѕРіРѕ Р»СѓС‡Р° (Calculate projected pivots) Рє С‚РµРєСѓС‰РµРјСѓ РјР°РєСЃРёРјСѓРјСѓ/РјРёРЅРёРјСѓРјСѓ
+- Р Р°СЃС‡РµС‚ 5-Р±Р°СЂРѕРІС‹С… С„СЂР°РєС‚Р°Р»РѕРІ Р‘РёР»Р»Р° Р’РёР»СЊСЏРјСЃР° РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РЅР° РіСЂР°С„РёРєРµ
+"""
+
+import numpy as np
+import pandas as pd
+
+
+def calculate_fractal_zigzag(df_candles, dev_percent=0.9, min_swing_pts=None, pivot_legs=4, calculate_projected=True):
+    """
+    Р Р°СЃСЃС‡РёС‚С‹РІР°РµС‚ СЌС‚Р°Р»РѕРЅРЅС‹Р№ РєР°РЅРѕРЅРёС‡РµСЃРєРёР№ Р—РёРі-Р—Р°Рі TradingView РїРѕ РѕС‚РєР»РѕРЅРµРЅРёСЋ С†РµРЅС‹ (Deviation).
+
+    :param df_candles: DataFrame СЃРѕ СЃРІРµС‡Р°РјРё (open, high, low, close, time, bar_idx)
+    :param dev_percent: РџРѕСЂРѕРі СЂР°Р·РІРѕСЂРѕС‚Р° РІ % (РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ 0.9%)
+    :param min_swing_pts: РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№ С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Р№ РїРѕСЂРѕРі РІ РїСѓРЅРєС‚Р°С… (РµСЃР»Рё Р·Р°РґР°РЅ, РїСЂРёРѕСЂРёС‚РµС‚ РЅР°Рґ dev_percent)
+    :param pivot_legs: РќРѕРіРё С‚РѕС‡РµРє СЂР°Р·РІРѕСЂРѕС‚Р° (TradingView Depth, РґР»СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё РЅР°СЃС‚СЂРѕРµРє)
+    :param calculate_projected: РџСЂРѕРµС†РёСЂРѕРІР°С‚СЊ Р»Рё С‚РµРєСѓС‰РёР№ РЅРµР·Р°РєСЂС‹С‚С‹Р№ Р»СѓС‡ РґРѕ С‚РµРєСѓС‰РµРіРѕ СЌРєСЃС‚СЂРµРјСѓРјР°
+    :return: (df_candles, pivots)
+      pivots: СЃРїРёСЃРѕРє СЃР»РѕРІР°СЂРµР№ {
+          'idx': int,           # РРЅРґРµРєСЃ Р±Р°СЂР° РІ df_candles
+          'bar_idx': float,     # Р—РЅР°С‡РµРЅРёРµ bar_idx РґР»СЏ РѕС‚СЂРёСЃРѕРІРєРё РЅР° РѕСЃРё X
+          'time': pd.Timestamp, # Р’СЂРµРјСЏ Р±Р°СЂР°
+          'price': float,       # Р¦РµРЅР° СЌРєСЃС‚СЂРµРјСѓРјР° (High РёР»Рё Low)
+          'type': 'HIGH'/'LOW', # РўРёРї РїРёРІРѕС‚Р°
+          'projected': bool     # True РґР»СЏ Р·Р°РІРµСЂС€Р°СЋС‰РµРіРѕ Р°РєС‚РёРІРЅРѕРіРѕ Р»СѓС‡Р°
+      }
+    """
+    if df_candles is None or len(df_candles) < 2:
+        return df_candles, []
+
+    # РћР±СЂР°С‚РЅР°СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚СЊ, РµСЃР»Рё РїРµСЂРІС‹Рј РїР°СЂР°РјРµС‚СЂРѕРј РїРµСЂРµРґР°Р»Рё mode='macro'
+    if isinstance(dev_percent, str):
+        dev_percent = 0.9
+
+    df = df_candles.copy()
+    n = len(df)
+
+    highs = df["high"].values
+    lows = df["low"].values
+    bar_indices = df["bar_idx"].values if "bar_idx" in df.columns else np.arange(n)
+    times = df["time"].values if "time" in df.columns else np.arange(n)
+
+    # 1. 5-Р±Р°СЂРѕРІС‹Рµ С„СЂР°РєС‚Р°Р»С‹ Р’РёР»СЊСЏРјСЃР° (РґР»СЏ РіСЂР°С„РёС‡РµСЃРєРёС… РјР°СЂРєРµСЂРѕРІ РЅР° СЃРІРµС‡Р°С…)
+    f_up = np.full(n, np.nan)
+    f_down = np.full(n, np.nan)
+
+

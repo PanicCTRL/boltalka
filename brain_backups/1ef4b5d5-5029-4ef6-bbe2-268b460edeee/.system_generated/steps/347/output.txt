@@ -1,0 +1,28 @@
+
+The command exited with code 0.
+Output:
+
+      end
+  end
+  
+  function OnAllTrade(alltrade)
+      if alltrade.class_code ~= class_code or alltrade.sec_code ~= sec_code then return end
+>     if not CheckTradeFreshness(alltrade) then return end
+      if alltrade.price == currentPrice then return end
+      prevPrice = currentPrice
+      currentPrice = alltrade.price
+      UpdateLimits()
+      LevelCross()
+  end 
+  
+  function OnDisconnected()
+      message("Нет связи с сервером.", 2)
+  end
+  
+  function OnConnected(flag)
+      message("Соединение с сервером восстановлено.", 1)
+  end
+  
+
+
+

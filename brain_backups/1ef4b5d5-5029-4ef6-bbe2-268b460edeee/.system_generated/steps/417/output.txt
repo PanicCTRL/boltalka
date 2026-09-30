@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+  File "<string>", line 2
+    content = '''# TODO_SPLIT_FRACTAL.md � � � � � � split_fractal
+              ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 23)
+

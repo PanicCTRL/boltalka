@@ -1,0 +1,29 @@
+
+The command exited with code 0.
+Output:
+
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:9:
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:10:function CheckTradeFreshness(alltrade)
+> Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:11:    if not alltrade or not alltrade.datetime then return
+ false end
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:12:
+> Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:13:    local tr_sec  = os.time(alltrade.datetime)
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:14:    local pc_sec  = os.time()
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:15:    local lag_sec = pc_sec - tr_sec
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:16:
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:17:    -- ��� ��������� ������, ���� ��� �� ��������� �����
+ (� �������� -2 ��� �� ���������� �����)
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:55:
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:56:function CheckTradeFreshness(alltrade)
+> Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:57:    if not alltrade or not alltrade.datetime then return 
+false end
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:58:
+> Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:59:    local tr_sec  = os.time(alltrade.datetime)
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:60:    local pc_sec  = os.time()
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:61:    local lag_sec = pc_sec - tr_sec
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:62:
+  Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:63:    -- ��� ��������� ������, ���� ��� �� ��������� ����� 
+(� �������� -2 ��� �� ���������� �����)
+
+
+

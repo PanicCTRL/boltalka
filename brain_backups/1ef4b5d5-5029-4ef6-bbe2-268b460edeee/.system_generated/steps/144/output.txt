@@ -1,0 +1,62 @@
+
+The command exited with code 0.
+Output:
+
+  
+  maxPrices    = {}    -- Таблица максимумов последних 5 свечей
+  minPrices    = {}    -- Таблица минимумов последних 5 свечей
+> fractals     = {}    -- Таблица найденных последних 6 фракталов
+  
+  low_price    = 0
+  up_price     = 0
+  currentPrice = 0
+  prevPrice    = 0
+  startPrice   = 0
+> lastFractal  = 0
+  
+  opn			        = false
+  stopRpcd		    = false -- Использовать переменную в логике треилстопа когда будет добавлен.
+  end
+  
+  function LevelCross()
+>     if prevPrice == 0 or #fractals == 0 then return end
+  
+      virt = VirtualPos()
+  
+          startPrice = 0
+      end
+  
+>     for i = 1, #fractals do
+>         local f = fractals[i]
+          local crossUp   = (prevPrice < f and currentPrice >= f)
+          local crossDown = (prevPrice > f and currentPrice <= f)
+  
+          if crossUp or crossDown then
+>             if f ~= lastFractal and not opn and not virt then
+                  LogReset(f)
+                  startPrice  = f
+>                 lastFractal = f
+                  count_t     = count_trades
+                  count_v     = count_trades
+              end
+  function main()
+      LogStart()
+      pnl_day_pts, pnl_day_steps = Read_pnl_day()
+>     fractals = Read_frc(file)
+>     if #fractals > 0 then LogStartFractals() end
+      while is_run do
+          FlushLogs()
+          local rawUp   = tonumber(getParamEx(class_code, sec_code, "PRICEMAX").param_value) or 0
+              
+              local maxStr = table.concat(maxPrices, ", ")
+              local minStr = table.concat(minPrices, ", ")
+>             local fracStr = table.concat(fractals, ", ")
+              
+>             frc_value = table.concat(fractals, " ")
+>             if #fractals > 0 then
+                  FractalTransfer(frc_value)
+              end
+  
+
+
+

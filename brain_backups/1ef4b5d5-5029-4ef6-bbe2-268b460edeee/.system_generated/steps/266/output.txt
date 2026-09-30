@@ -1,0 +1,28 @@
+
+The command exited with code 0.
+Output:
+warning: in the working copy of 'true_fractal/split_f_logic.lua', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'true_fractal/tf_killstop.lua', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'true_fractal/tf_sendtransaction_spbfut.lua', LF will be replaced by CRLF the next time Git touches it
+[split_fractals a1dca64] feat(fractal): split fractals into fractal_up and fractal_down, implement split_f_logic
+ 8 files changed, 1013 insertions(+), 145 deletions(-)
+ create mode 100644 true_fractal/split_f_logic.lua
+ create mode 100644 true_fractal/tf_killstop.lua
+ create mode 100644 true_fractal/tf_logger.lua
+ create mode 100644 true_fractal/tf_logic.lua
+ create mode 100644 true_fractal/tf_read_n_writers.lua
+ create mode 100644 true_fractal/tf_sendtransaction_spbfut.lua
+ create mode 100644 true_fractal/true_fractal.lua
+warning: in the working copy of 'true_fractal/split_f_logic.lua', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'true_fractal/tf_killstop.lua', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'true_fractal/tf_sendtransaction_spbfut.lua', LF will be replaced by CRLF the next time Git touches it
+[split_fractals 5fc55ca] feat(fractal): split fractals into fractal_up and fractal_down, implement split_f_logic
+ 9 files changed, 872 insertions(+)
+ create mode 100644 true_fractal/split_f_logic.lua
+ create mode 100644 true_fractal/tf_killstop.lua
+ create mode 100644 true_fractal/tf_logger.lua
+ create mode 100644 true_fractal/tf_logic.lua
+ create mode 100644 true_fractal/tf_read_n_writers.lua
+ create mode 100644 true_fractal/tf_sendtransaction_spbfut.lua
+ create mode 100644 true_fractal/true_fractal.lua
+

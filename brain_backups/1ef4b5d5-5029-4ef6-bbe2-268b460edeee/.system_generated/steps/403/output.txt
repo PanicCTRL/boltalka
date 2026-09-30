@@ -1,0 +1,64 @@
+
+The command exited with code 0.
+Output:
+
+-- ============================================================================
+-- 3. ГЕНЕРАТОР ФРАКТАЛОВ (BILL WILLIAMS FRACTALS)
+-- ============================================================================
+function PushPrice(high, low)
+    if not high or high == 0 or not low or low == 0 then return end
+
+    table.insert(maxPrices, high)
+    if #maxPrices > 5 then
+        table.remove(maxPrices, 1)
+    end
+
+    table.insert(minPrices, low)
+    if #minPrices > 5 then
+        table.remove(minPrices, 1)
+    end
+end
+
+function GetFractal()
+    if #maxPrices < 5 or #minPrices < 5 then return end
+
+    -- ФРАКТАЛ ВВЕРХ (3-й бар — пик среди 5 баров)
+    if maxPrices[3] > maxPrices[1] and maxPrices[3] > maxPrices[2] and 
+       maxPrices[3] > maxPrices[4] and maxPrices[3] > maxPrices[5] then
+        table.insert(fractals, maxPrices[3])
+        if #fractals > 6 then
+            table.remove(fractals, 1)
+        end
+        LogMockEvent("FRACTAL_UP", "Найден фрактал вверх: " .. tostring(maxPrices[3]))
+    end
+
+    -- ФРАКТАЛ ВНИЗ (3-й бар — впадина среди 5 баров)
+    if minPrices[3] < minPrices[1] and minPrices[3] < minPrices[2] and 
+       minPrices[3] < minPrices[4] and minPrices[3] < minPrices[5] then
+        table.insert(fractals, minPrices[3])
+        if #fractals > 6 then
+            table.remove(fractals, 1)
+        end
+        LogMockEvent("FRACTAL_DOWN", "Найден фрактал вниз: " .. tostring(minPrices[3]))
+    end
+end
+
+-- ============================================================================
+-- 4. ВИРТУАЛЬНАЯ И РЕАЛЬНАЯ ПОЗИЦИЯ
+-- ============================================================================
+function VirtualPos()
+    if not virt then return false end
+
+    if operation == "B" then
+        if currentPrice >= virt_stop or currentPrice <= virt_take then
+            LogMockEvent("VIRT_CLOSE", "Закрытие виртуальной позиции. Цена: " .. tostring(currentPrice))
+            virt = false
+            return false
+        end
+        return true
+    else
+        if currentPrice <= virt_stop or currentPrice >= virt_take then
+            LogMockEvent("VIRT_CLOSE", "Закрытие виртуальной позиции. Цена: " .. tostring(currentPrice))
+            virt = false
+            return false
+

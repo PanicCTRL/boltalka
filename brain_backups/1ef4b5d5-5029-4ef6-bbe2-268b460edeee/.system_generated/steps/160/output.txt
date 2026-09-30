@@ -1,0 +1,8 @@
+
+The command exited with code 0.
+Output:
+Updated Y:\true_fractal\TODO_TRUE_FRACTAL.md
+Updated I:\fractals\true_fractal\TODO_TRUE_FRACTAL.md
+Updated Y:\my_fractal\TODO.md
+Updated Y:\STRG\TODO_STRG.md
+

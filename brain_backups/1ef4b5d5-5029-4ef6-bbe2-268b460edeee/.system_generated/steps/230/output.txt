@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+Created Y:\true_fractal\split_f_logic.lua in CP1251
+

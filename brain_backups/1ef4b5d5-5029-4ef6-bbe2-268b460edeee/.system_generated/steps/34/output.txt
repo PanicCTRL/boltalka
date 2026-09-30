@@ -1,0 +1,11 @@
+
+The command exited with code 0.
+Output:
+
+FullName                                          
+--------                                          
+Y:\STRG\fractal_zigzag.py                         
+Y:\STRG\__pycache__\fractal_zigzag.cpython-312.pyc
+
+
+

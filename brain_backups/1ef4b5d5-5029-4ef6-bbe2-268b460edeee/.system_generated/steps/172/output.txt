@@ -1,0 +1,27 @@
+
+The command exited with code 0.
+Output:
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .agents/AGENTS.md
+	modified:   true_fractal/TODO_TRUE_FRACTAL.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+f4e13b3 feat(zigzag): dynamic active ray tracking current candle high/low in Lua
+37c69a1 feat(zigzag): implement canonical TradingView deviation zigzag in Lua
+fd58121 feat(fractal_zigzag): implement Dow macro swings collapse on Higher High / Lower Low
+3fed466 feat(fractal_zigzag): add standalone fractal zigzag module (Box 1)
+5e3c36b docs(true_fractal): add Stage 5 ZigZag and Regression Channel
+b2e3bf0 docs(true_fractal): finalize take-as-level experiment outcome and rollback
+f3a29af revert(true_fractal): roll back take-as-level mechanics, return to clean Channel 4 + Slope Filter base
+3049383 docs(true_fractal): document candle-direction re-entry improvements
+3b5abf6 feat(true_fractal): 1st attempt on same candle, 3 re-entries only on growing/falling candle
+fb8bf44 feat(true_fractal): filter take-as-level by trend continuation and 1-attempt-per-candle
+

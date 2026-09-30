@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+Wrote Y:\split_fractal\sf_logic.lua (CP1251)
+Wrote Y:\split_fractal\sf_logger.lua (CP1251)
+Wrote Y:\split_fractal\sf_sendtransaction_spbfut.lua (CP1251)
+Wrote Y:\split_fractal\sf_killstop.lua (CP1251)
+Wrote Y:\split_fractal\sf_read_n_writers.lua (CP1251)
+Wrote Y:\split_fractal\split_fractal.lua (CP1251)
+Wrote .gitignore
+Wrote README.md
+

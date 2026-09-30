@@ -1,0 +1,21 @@
+
+The command exited with code 0.
+Output:
+
+Name                               Length
+----                               ------
+.gitignore                             26
+fractal_killstop.lua                 1039
+fractal_logger.lua                   5780
+fractal_logic.lua                    1948
+fractal_sendtransaction_spbfut.lua   3260
+frc_read_n_writers.lua               2394
+frc_value.txt                          55
+my_fractal.lua                       6849
+pnl_day.txt                            26
+README.md                            7529
+STRATEGY_LOGIC.md                    5137
+TODO.md                             31570
+
+
+

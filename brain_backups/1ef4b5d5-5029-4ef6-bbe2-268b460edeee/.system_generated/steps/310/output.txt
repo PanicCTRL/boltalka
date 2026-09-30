@@ -1,0 +1,45 @@
+
+The command exited with code 0.
+Output:
+    local isClose = (bit.band(flags, 1) == 0)
+    WriteTestLog(logStr, isClose)
+end
+
+function OnAllTrade(alltrade)
+    if not alltrade or not alltrade.sec_code or not alltrade.class_code then return end
+    if alltrade.sec_code ~= sec_code or alltrade.class_code ~= class_code then return end
+
+    if alltrade.datetime and type(alltrade.datetime) == "table" then
+        -- Берём время компьютера прямо в момент прихода тика
+        local pc_sec = os.time()
+        local pc_ms  = math.max(0, math.floor(math.fmod(os.clock(), 1.0) * 1000))
+        local pc_total_ms = pc_sec * 1000 + pc_ms
+
+        -- Время биржевой сделки из alltrade.datetime
+        local tr_sec = os.time({
+            year  = alltrade.datetime.year or os.date("*t").year,
+            month = alltrade.datetime.month or os.date("*t").month,
+            day   = alltrade.datetime.day or os.date("*t").day,
+            hour  = alltrade.datetime.hour or 0,
+            min   = alltrade.datetime.min or 0,
+            sec   = alltrade.datetime.sec or 0
+        })
+        local tr_ms = alltrade.datetime.ms or 0
+        local tr_total_ms = tr_sec * 1000 + tr_ms
+
+        local delta_ms  = pc_total_ms - tr_total_ms
+        local delta_sec = delta_ms / 1000.0
+
+        local pc_str = os.date("%H:%M:%S", pc_sec) .. string.format(".%03d", pc_ms)
+        local tr_str = string.format("%02d:%02d:%02d.%03d",
+            alltrade.datetime.hour or 0, alltrade.datetime.min or 0, alltrade.datetime.sec or 0, tr_ms)
+
+        local line = string.format("Разница: %+d мс (%.3f сек) | PC: %s | Биржа: %s | Цена: %s | Qty: %s",
+            delta_ms, delta_sec, pc_str, tr_str, tostring(alltrade.price or 0), tostring(alltrade.qty or 0))
+
+        -- Кладём в буфер; main() заберёт всё накопленное за 5 сек
+        table.insert(trade_buffer, {line = line, delta_ms = delta_ms})
+        has_first_trade = true
+    end
+end
+

@@ -1,0 +1,64 @@
+
+The command exited with code 0.
+Output:
+-- Главный каркас робота -- split_fractal.lua
+-- Брокер Сбербанк, QUIK v.11.x, Lua 5.1
+
+firm_id       = "SPBFUT0002E"  -- Срочный рынок
+trade_type			= "M"            -- Лимитная заявка (L) или рыночная (M)
+class_code    = "SPBFUT"       -- Код класса
+sec_code      = "MXU6"         -- Код инструмента
+client_code   = "762157N"      -- Код клиента
+
+operation			= "B"				-- Торгуем только шорт или лонг
+quantity			= "1"
+
+slSlippage			= 25
+slOffset			= 75
+tpOffset			= 1050
+
+count_trades		= 4					-- Количество разрешённых сделок
+count_t 		    = count_trades
+count_v 		    = count_trades
+
+period_time  = 60    -- Время бара (1 мин = 60 сек)
+end_time     = 0     -- Время окончания бара
+file         = getScriptPath() .. "\\frc_value.txt"
+
+maxPrices    = {}    -- Таблица максимумов последних 5 свечей
+minPrices    = {}    -- Таблица минимумов последних 5 свечей
+fractal_up   = {}    -- Таблица найденных последних верхних фракталов (сопротивления)
+fractal_down = {}    -- Таблица последних нижних фракталов (поддержки)
+
+low_price    = 0
+up_price     = 0
+currentPrice = 0
+prevPrice    = 0
+startPrice   = 0
+lastFractal  = 0
+
+opn			        = false
+stopRpcd		    = false -- Использовать переменную в логике треилстопа когда будет добавлен.
+
+virt                = false
+virt_stop           = 0
+virt_take           = 0
+
+stop_price 			= 0
+take_price			= 0
+is_run              = true
+
+orderDone           = false
+tradeDone           = false
+
+avg_open   = 0
+avg_close  = 0
+open_cost  = 0
+open_qty   = 0
+close_cost = 0
+close_qty  = 0
+pnl_session_pts   = 0
+pnl_session_steps = 0
+pnl_day_pts       = 0
+pnl_day_steps     = 0
+

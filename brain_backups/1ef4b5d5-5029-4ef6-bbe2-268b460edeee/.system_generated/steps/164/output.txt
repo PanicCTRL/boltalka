@@ -1,0 +1,43 @@
+
+The command exited with code 0.
+Output:
+
+> function LevelCross()
+      if prevPrice == 0 or #fractals == 0 then return end
+  
+      virt = VirtualPos()
+  
+      if not opn and not virt and count_t == 0 and count_v == 0 then
+          startPrice = 0
+      end
+  
+      for i = 1, #fractals do
+          local f = fractals[i]
+          local crossUp   = (prevPrice < f and currentPrice >= f)
+          local crossDown = (prevPrice > f and currentPrice <= f)
+  
+          if crossUp or crossDown then
+              if f ~= lastFractal and not opn and not virt then
+                  LogReset(f)
+                  startPrice  = f
+                  lastFractal = f
+                  count_t     = count_trades
+                  count_v     = count_trades
+              end
+  
+              if f == startPrice then
+                  local direction = crossUp and "СНИЗУ ВВЕРХ" or "СВЕРХУ ВНИЗ"
+                  LogCross(f, direction)
+  
+                  if (operation == "B" and crossUp) or (operation == "S" and crossDown) then
+                      Trade()
+                  elseif (operation == "B" and crossDown) or (operation == "S" and crossUp) then
+                      OpenVirt()
+                  end
+              end
+          end
+      end
+  end
+
+
+

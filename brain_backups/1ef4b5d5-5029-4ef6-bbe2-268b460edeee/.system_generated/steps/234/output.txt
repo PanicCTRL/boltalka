@@ -1,0 +1,29 @@
+
+The command exited with code 0.
+Output:
+61: price_limit = 0
+62: limitUp     = 0
+63: limitDown   = 0
+64: 
+65: function CountDecimals(n)
+66:     local str = string.format("%g", n)
+67:     local _, decimalPart = str:match("(%.(.*))$")
+68:     if decimalPart then
+69:         return #decimalPart
+70:     else
+71:         return 0
+72:     end
+73: end
+74: 
+75: dofile(getScriptPath() .. "\\tf_read_n_writers.lua")
+76: dofile(getScriptPath() .. "\\tf_logger.lua")
+77: dofile(getScriptPath() .. "\\tf_logic.lua")
+78: dofile(getScriptPath() .. "\\tf_sendtransaction_spbfut.lua")
+79: dofile(getScriptPath() .. "\\tf_killstop.lua")
+80: dofile("Y:\\Knowledge\\best_practices\\alltrade_reconnect_filter.lua")
+81: 
+82: step = tonumber(getParamEx(class_code, sec_code, "SEC_PRICE_STEP").param_value)
+83: if not step or step == 0 then
+84: 	error("TrueFractal: не удалось получить SEC_PRICE_STEP для " .. sec_code)
+85: end
+

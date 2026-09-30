@@ -1,0 +1,12 @@
+
+The command exited with code 1.
+Output:
+ОТ : The term 'ОТ' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spe
+lling of the name, or if a path was included, verify that the path is correct and try again.
+At line:79 char:44
++                 LogCross(f, \"СНИЗУ ВВЕРХ (ОТ НИЖНЕГО ФРАКТАЛА)\")
++                                            ~~
+    + CategoryInfo          : ObjectNotFound: (ОТ:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+

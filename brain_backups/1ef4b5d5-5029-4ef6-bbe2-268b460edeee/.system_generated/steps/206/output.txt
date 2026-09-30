@@ -1,0 +1,50 @@
+
+The command exited with code 0.
+Output:
+commit 9d2b9b71958b93fdf412b97dd7085ec9edd7a6d1
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Tue Sep 8 20:40:13 2026 +0300
+
+    Revert "Set period_time to 300 seconds (5 minute timeframe)"
+    
+    This reverts commit 343596bc23e217ecf5b84190e4668ef12424821a.
+
+ my_fractal.lua | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 343596bc23e217ecf5b84190e4668ef12424821a
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Tue Sep 8 19:02:28 2026 +0300
+
+    Set period_time to 300 seconds (5 minute timeframe)
+
+ my_fractal.lua | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit dfc37fa78f65b2659e0c6177ee702d964ffe5f74
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Tue Sep 8 12:45:51 2026 +0300
+
+    Add Section 19: Reversal robots and direction filter to TODO
+
+ TODO.md | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+commit 49adb1bec13688eaf492ec3bf828b89db400de86
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Sun Sep 6 09:34:02 2026 +0300
+
+    docs(todo): add backlog task on blocking virtual trades when in real position
+
+ TODO.md | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+commit 570911c214d55eafb035b078269cc1016e1bedd5
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Tue Sep 1 21:26:23 2026 +0300
+
+    feat: add OnAllTrade freshness filter (anti-reconnect lag) and connection status callbacks
+
+ my_fractal.lua | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+

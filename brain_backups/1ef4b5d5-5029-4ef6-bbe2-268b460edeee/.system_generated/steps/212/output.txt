@@ -1,0 +1,16 @@
+
+The command exited with code 0.
+Output:
+9d2b9b7 Revert "Set period_time to 300 seconds (5 minute timeframe)"
+343596b Set period_time to 300 seconds (5 minute timeframe)
+dfc37fa Add Section 19: Reversal robots and direction filter to TODO
+49adb1b docs(todo): add backlog task on blocking virtual trades when in real position
+570911c feat: add OnAllTrade freshness filter (anti-reconnect lag) and connection status callbacks
+56dad17 docs: expand Section 18 with 4-phase Market Regime Classifier (Trend, Triangle Squeeze, Flat)
+ddbeb45 docs: clarify Section 2 with 06:59 Opening Auction price capture and 07:00:00 market start
+53c1a73 docs: add Section 18 (Slanted Trend Channels & Structural Fractal Trailing) to TODO.md
+9286038 feat: centralize all WriteLog calls into logger module, add actual slippage logging and explicit exit tags
+793de7f docs: add Section 17 (Range Fractal & Hybrid Range-Breakout Strategy) to TODO.md
+f33c446 docs: add Future Dreams & Mobile Ecosystem (Section 16) to TODO.md
+7644690 docs: add wide stop-loss (slOffset_wide) for first trade on trailed level to Section 1
+

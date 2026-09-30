@@ -1,0 +1,6 @@
+
+The command exited with code 0.
+Output:
+9286038 feat: centralize all WriteLog calls into logger module, add actual slippage logging and explicit exit tags
+5741b40 refactor: cleanly separate my_fractal and true_fractal into independent folders with unique loggers, move tools to support_pro, cleanup clutter
+

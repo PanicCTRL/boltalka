@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+
+Y:\my_fractal\my_fractal.lua:184:    if not CheckTradeFreshness(alltrade) then return end
+split_fractal.lua:277:    if not CheckTradeFreshness(alltrade) then return end
+Y:\true_fractal\true_fractal.lua:277:    if not CheckTradeFreshness(alltrade) then return end
+
+
+

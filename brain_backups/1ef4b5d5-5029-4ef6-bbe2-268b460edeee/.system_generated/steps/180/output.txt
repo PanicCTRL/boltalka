@@ -1,0 +1,32 @@
+
+The command exited with code 1.
+Output:
+Get-ChildItem : Access to the path 'Y:\$RECYCLE.BIN\S-1-5-21-2362234596-1138436972-302401044-1001' is denied.
+At line:1 char:1
++ Get-ChildItem "Y:\" -Recurse -Filter ".git" -Hidden -Directory | Sele ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (Y:\$RECYCLE.BIN...-302401044-1001:String) [Get-ChildItem], Unauthoriz 
+   edAccessException
+    + FullyQualifiedErrorId : DirUnauthorizedAccessError,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 
+
+FullName                        
+--------                        
+Y:\callback-OnAllTrade_test\.git
+Y:\clockwise\.git               
+Y:\fractaldual\.git             
+Y:\Knowledge\.git               
+Y:\my_fractal\.git              
+Y:\STRG\.git                    
+Get-ChildItem : Access to the path 'Y:\System Volume Information' is denied.
+At line:1 char:1
++ Get-ChildItem "Y:\" -Recurse -Filter ".git" -Hidden -Directory | Sele ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (Y:\System Volume Information:String) [Get-ChildItem], UnauthorizedAcc 
+   essException
+    + FullyQualifiedErrorId : DirUnauthorizedAccessError,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 
+Y:\TODO\.git                    
+
+
+

@@ -1,0 +1,11 @@
+
+The command exited with code 0.
+Output:
+
+FullName                                     
+--------                                     
+Y:\STRG\TODO_STRG.md                         
+I:\fractals\true_fractal\TODO_TRUE_FRACTAL.md
+
+
+

@@ -1,0 +1,64 @@
+
+The command exited with code 0.
+Output:
+--if not lineStart or lineStart == 0 then lineStart = openPrice --; message("Нет данных предыдущего дня") 
+--end -- Не должно быть так, но проверку, думаю, лучше добавить
+-- if lineStart == openPrice and fractal then lineStart = fractal; message("Данных предыдущего дня не было") end
+
+--if currentFractal < lastFractalUp-(lastFractalUp*delta) then lineStart = lastFractalUp; lineEnd = currentFractal end
+--if currentFractal > lastFractalDown*(delta+1) then lineStart = lastFractalDown; lineEnd = currentFractal end 
+
+-- Параметры и переменные трендовой линии регрессии
+deviation       = 0.008 -- 0.8% минимальный порог размаха тренда
+
+lineStart       = 0     -- Цена начала базового отрезка
+lineEnd         = 0     -- Цена конца базового отрезка
+startBar        = 0     -- Номер бара начала отрезка (для регрессии X)
+endBar          = 0     -- Номер бара конца отрезка (для регрессии X)
+trendDir        = 0     -- 0: боковик (нет тренда), 1: тренд вверх, -1: тренд вниз
+
+lastFractalUp   = 0     -- Последний зафиксированный максимум
+lastFractalDown = 0     -- Последний зафиксированный минимум
+lastBarUp       = 0     -- Бар последнего максимума
+lastBarDown     = 0     -- Бар последнего минимума
+
+-- Функция обновления опорной линии при появлении нового подтвержденного фрактала
+-- isUp: true если фрактал вверх, false если фрактал вниз
+-- price: цена экстремума фрактала
+-- barIdx: порядковый номер свечи фрактала
+function UpdateTrendLine(isUp, price, barIdx)
+    -- 1. Запоминаем свежий фрактал
+    if isUp then
+        lastFractalUp = price
+        lastBarUp = barIdx
+    else
+        lastFractalDown = price
+        lastBarDown = barIdx
+    end
+
+    -- 2. ФАЗА БОВИКА (trendDir == 0): ждем первое истинное движение > 0.8%
+    if trendDir == 0 then
+        if lastFractalUp > 0 and lastFractalDown > 0 then
+            -- Проверка импульса вверх от низины
+            if isUp and price >= lastFractalDown * (1 + deviation) then
+                trendDir  = 1
+                lineStart = lastFractalDown
+                startBar  = lastBarDown
+                lineEnd   = price
+                endBar    = barIdx
+            -- Проверка импульса вниз от вершины
+            elseif not isUp and price <= lastFractalUp * (1 - deviation) then
+                trendDir  = -1
+                lineStart = lastFractalUp
+                startBar  = lastBarUp
+                lineEnd   = price
+                endBar    = barIdx
+            end
+        end
+        return
+    end
+
+    -- 3. ФАЗА ТРЕНДА ВВЕРХ (trendDir == 1)
+    if trendDir == 1 then
+        if isUp then
+

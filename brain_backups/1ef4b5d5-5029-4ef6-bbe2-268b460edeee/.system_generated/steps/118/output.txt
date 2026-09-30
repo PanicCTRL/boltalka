@@ -1,0 +1,17 @@
+
+The command exited with code 0.
+Output:
+
+fractal_zigzag.lua:36:    if not high or not low or high == 0 or low == 0 then return end
+mock_opening.lua:103:    if opn then return end
+mock_opening.lua:106:        if count_t <= 0 or longExhausted then return end
+mock_opening.lua:117:        if prevCount_t <= 0 or prevLongExhausted then return end
+mock_opening.lua:128:        if count_t <= 0 or longExhausted then return end
+mock_opening.lua:142:    if virt then return end
+mock_opening.lua:145:        if count_v <= 0 or shortExhausted then return end
+mock_opening.lua:155:        if prevCount_v <= 0 or prevShortExhausted then return end
+mock_opening.lua:165:        if count_v <= 0 or shortExhausted then return end
+mock_opening.lua:178:    if not opn then return end
+
+
+

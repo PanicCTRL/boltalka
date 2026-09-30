@@ -1,0 +1,24 @@
+
+The command exited with code 0.
+Output:
+# ?? TODO: Дорожная карта и статус проекта Fractal (SPBFUT / QUIK)
+
+Этот файл содержит текущий статус архитектуры, список выполненных задач и оставшийся план работы над роботом.
+
+---
+
+## ??? Текущий статус и архитектура (По Правилу 12)
+- **Главный файл:** true_fractal.lua (каркас, логика входов/выходов, коллбэки main, OnAllTrade, OnOrder, OnTrade).
+- **Файл старой версии:** my_fractal.lua (сохранён для совместимости).
+- **Подпрограммы (dofile):**
+  - fractal_logic.lua — таймер CheckTimer(), сдвиг PushPrice(), фракталы GetFractal(), экспорт FractalTransfer().
+  - frc_read_n_writers.lua — чтение фракталов Read_frc() из файла frc_value.txt при старте, буфер логов log_queue и FlushLogs().
+  - fractal_sendtransaction_spbfut.lua — подпрограмма отправки заявок SendOrder, SendStop, SendBracket (срочный рынок SPBFUT).
+  - fractal_logger.lua — двухуровневое логирование (fl_user_log.txt и fl_debug_log.txt) с подсчётом PnL в пунктах и шагах цены.
+  - fractal_writelog.lua — эталонный модуль записи строк в файл.
+  - fractal_killstop.lua — модуль снятия активных стоп-заявок.
+
+---
+
+## ?? История исправленных инцидентов и багов:
+

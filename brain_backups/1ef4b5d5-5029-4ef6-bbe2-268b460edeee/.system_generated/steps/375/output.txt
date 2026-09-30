@@ -1,0 +1,24 @@
+
+The command exited with code 0.
+Output:
+
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:1:-- alltrade_reconnect_filter.lua
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:10:function CheckTradeFreshness(alltrade)
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:11:    if not alltrade or not alltrade.datetime then return f
+alse end
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:13:    local tr_sec  = os.time(alltrade.datetime)
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:1:# ������ �� ������ ������ � ����������� (OnAllTrade Desync P
+rotection)
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:4:��� ������ ��������-���������� ��� ����������� ��������� QUI
+K �� �������� ��������� � �������� �������. ��� �������������� ����� QUIK ������� ��������� ��� ����������� �� ������� 
+������������ ������ (OnAllTrade) �� ������ �������� (�� ���������� ������ �� ���������� �����).
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:6:���� �������� ����� ����������� ����� ����� OnAllTrade ��� �
+������� ������� ������, �� ��������� ������������ ������ (����������� ��������� ����� ����� �� ������ ����) ��� �������
+��� ������ � �������� �������� ������ � ������� ������, ��� �������� � ���������������� ������.
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:11:�� ������ ������� 5418 ����� (alltrade_log.txt):
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:56:function CheckTradeFreshness(alltrade)
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:57:    if not alltrade or not alltrade.datetime then return fa
+lse end
+
+
+

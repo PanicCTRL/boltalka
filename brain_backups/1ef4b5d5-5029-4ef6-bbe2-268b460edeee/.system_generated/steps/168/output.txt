@@ -1,0 +1,54 @@
+
+The command exited with code 0.
+Output:
+    end
+
+    -- 2. ЭТАП ПОСЛЕ ПОЯВЛЕНИЯ КОРИДОРА: ДВЕ ВЕРХНИЕ И ДВЕ НИЖНИЕ ГРАНИЦЫ
+    if hasCorridor then
+        -- Фильтр ступеней канала (Slope Filter):
+        -- Если канал растет (High выше и Low не ниже) -> восходящий тренд (шорты блокируются)
+        -- Если канал падает (Low ниже и High не выше) -> нисходящий тренд (лонги блокируются)
+        local isUpTrend = false
+        local isDownTrend = false
+        if prevUpperCorridor > 0 and prevLowerCorridor > 0 then
+            isUpTrend = (upperCorridor > prevUpperCorridor or lowerCorridor > prevLowerCorridor)
+            isDownTrend = (upperCorridor < prevUpperCorridor or lowerCorridor < prevLowerCorridor)
+        end
+
+        -- Верхние границы (SHORT): разрешены ТОЛЬКО если нет восходящего тренда
+        if not isUpTrend then
+            if upperCorridor > 0 then
+                local crossUpperDown = (prevPrice > upperCorridor and currentPrice <= upperCorridor)
+                if crossUpperDown and not virt and not shortExhausted and count_v > 0 then
+                    LogMockEvent("CROSS_UPPER_DOWN", "Возврат под верхнюю границу " .. tostring(upperCorridor) .. " сверху вниз. Вход в SHORT")
+                    OpenVirt(upperCorridor)
+                end
+            end
+
+            if prevUpperCorridor > 0 and prevUpperCorridor ~= upperCorridor then
+                local crossPrevUpperDown = (prevPrice > prevUpperCorridor and currentPrice <= prevUpperCorridor)
+                if crossPrevUpperDown and not virt and not prevShortExhausted and prevCount_v > 0 then
+                    LogMockEvent("CROSS_PREV_UPPER_DOWN", "Возврат под предыдущую верхнюю границу " .. tostring(prevUpperCorridor) .. " сверху вниз. Вход в SHORT")
+                    OpenVirt(prevUpperCorridor)
+                end
+            end
+        end
+
+        -- Нижние границы (LONG): разрешены ТОЛЬКО если нет нисходящего тренда
+        if not isDownTrend then
+            if lowerCorridor > 0 then
+                local crossLowerUp = (prevPrice < lowerCorridor and currentPrice >= lowerCorridor)
+                if crossLowerUp and not opn and not longExhausted and count_t > 0 then
+                    LogMockEvent("CROSS_LOWER_UP", "Возврат над нижнюю границу " .. tostring(lowerCorridor) .. " снизу вверх. Вход в LONG")
+                    OpenReal(lowerCorridor)
+                end
+            end
+
+            if prevLowerCorridor > 0 and prevLowerCorridor ~= lowerCorridor then
+                local crossPrevLowerUp = (prevPrice < prevLowerCorridor and currentPrice >= prevLowerCorridor)
+                if crossPrevLowerUp and not opn and not prevLongExhausted and prevCount_t > 0 then
+                    LogMockEvent("CROSS_PREV_LOWER_UP", "Возврат над предыдущую нижнюю границу " .. tostring(prevLowerCorridor) .. " снизу вверх. Вход в LONG")
+                    OpenReal(prevLowerCorridor)
+                end
+            end
+

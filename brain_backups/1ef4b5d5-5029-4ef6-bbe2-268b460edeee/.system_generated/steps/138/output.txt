@@ -1,0 +1,37 @@
+
+The command exited with code 0.
+Output:
+
+  minPrices       = {}
+> fractals        = {}
+  plateaus        = {}
+  history_log     = {}
+  lastPlateauLow  = 0
+> lastFractalUp   = 0
+> lastFractalDown = 0
+  
+  -- ============================================================================
+  function AddLevel(levelVal)
+>     for i = 1, #fractals do
+>         if fractals[i] == levelVal then
+              return
+          end
+      end
+>     table.insert(fractals, levelVal)
+>     if #fractals > 8 then
+>         table.remove(fractals, 1)
+      end
+  end
+          local fLevel = maxPrices[3]
+>         if fLevel ~= lastFractalUp then
+>             lastFractalUp = fLevel
+              UpdateUpperCorridor(fLevel)
+          end
+          local fLevel = minPrices[3]
+>         if fLevel ~= lastFractalDown then
+>             lastFractalDown = fLevel
+              UpdateLowerCorridor(fLevel)
+          end
+
+
+

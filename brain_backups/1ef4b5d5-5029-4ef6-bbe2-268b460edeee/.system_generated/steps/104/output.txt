@@ -1,0 +1,35 @@
+
+The command exited with code 0.
+Output:
+
+Path                             LineNumber Line                                                                       
+----                             ---------- ----                                                                       
+Y:\STRG\TODO_STRG.md                    123       * Перевходы (попытки 2, 3, 4): в LONG разрешены только если свеча ...
+Y:\true_fractal\mock_opening.lua         20 openDayPrice    = 0                                                        
+Y:\true_fractal\mock_opening.lua         22 openDayForgotten = false                                                   
+Y:\true_fractal\mock_opening.lua        127     elseif not openDayForgotten and lvl == openDayPrice then               
+Y:\true_fractal\mock_opening.lua        164     elseif not openDayForgotten and lvl == openDayPrice then               
+Y:\true_fractal\mock_opening.lua        313             openDayForgotten = true                                        
+Y:\true_fractal\mock_opening.lua        333             openDayForgotten = true                                        
+Y:\true_fractal\mock_opening.lua        404     if isStarted and not openDayForgotten and openDayPrice > 0 then        
+Y:\true_fractal\mock_opening.lua        406         local crossOpenUp = (prevPrice < openDayPrice and currentPrice >...
+Y:\true_fractal\mock_opening.lua        408             longLevel = openDayPrice                                       
+Y:\true_fractal\mock_opening.lua        409             startPrice = openDayPrice                                      
+Y:\true_fractal\mock_opening.lua        411             OpenReal(openDayPrice)                                         
+Y:\true_fractal\mock_opening.lua        415         local crossOpenDown = (prevPrice > openDayPrice and currentPrice...
+Y:\true_fractal\mock_opening.lua        417             shortLevel = openDayPrice                                      
+Y:\true_fractal\mock_opening.lua        419             OpenVirt(openDayPrice)                                         
+Y:\true_fractal\mock_opening.lua        484     if isStarted and not openDayForgotten then                             
+Y:\true_fractal\mock_opening.lua        487             openDayForgotten = true                                        
+Y:\true_fractal\mock_opening.lua        506             openDayPrice = currentPrice                                    
+Y:\true_fractal\mock_opening.lua        508             local rawTp = openDayPrice * 0.005                             
+Y:\true_fractal\mock_opening.lua        514             shortLevel = openDayPrice                                      
+Y:\true_fractal\mock_opening.lua        515             longLevel  = openDayPrice                                      
+Y:\true_fractal\mock_opening.lua        516             AddLevel(openDayPrice)                                         
+Y:\true_fractal\mock_opening.lua        518             LogMockEvent("START_LEVEL", "����� 07:00:00. ������������ ��...
+Y:\true_fractal\mock_opening.lua        519             OpenReal(openDayPrice)                                         
+Y:\true_fractal\mock_opening.lua        520             OpenVirt(openDayPrice)                                         
+Y:\my_fractal\TODO.md                   101   - 1-� ������� (fractals[1]): ���� �������� �������� (Opening Auction �...
+
+
+

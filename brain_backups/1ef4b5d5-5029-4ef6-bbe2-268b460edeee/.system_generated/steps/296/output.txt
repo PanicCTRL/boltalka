@@ -1,0 +1,53 @@
+
+The command exited with code 0.
+Output:
+
+fractal_zigzag.lua:13:ZigZag.currHighTime = ""
+fractal_zigzag.lua:16:ZigZag.currLowTime = ""
+fractal_zigzag.lua:26:    ZigZag.currHighTime = ""
+fractal_zigzag.lua:29:    ZigZag.currLowTime = ""
+fractal_zigzag.lua:35:function ZigZag.PushBar(high, low, barTime)
+fractal_zigzag.lua:39:    local t = barTime or tostring(i)
+fractal_zigzag.lua:44:        ZigZag.currHighTime = t
+fractal_zigzag.lua:47:        ZigZag.currLowTime = t
+fractal_zigzag.lua:60:            p.time = ZigZag.currLowTime
+fractal_zigzag.lua:65:            ZigZag.currHighTime = t
+fractal_zigzag.lua:71:            p.time = ZigZag.currHighTime
+fractal_zigzag.lua:76:            ZigZag.currLowTime = t
+fractal_zigzag.lua:81:                ZigZag.currHighTime = t
+fractal_zigzag.lua:86:                ZigZag.currLowTime = t
+fractal_zigzag.lua:94:            ZigZag.currHighTime = t
+fractal_zigzag.lua:100:            p.time = ZigZag.currHighTime
+fractal_zigzag.lua:105:            ZigZag.currLowTime = t
+fractal_zigzag.lua:110:            ZigZag.currLowTime = t
+fractal_zigzag.lua:117:            ZigZag.currLowTime = t
+fractal_zigzag.lua:123:            p.time = ZigZag.currLowTime
+fractal_zigzag.lua:128:            ZigZag.currHighTime = t
+fractal_zigzag.lua:133:            ZigZag.currHighTime = t
+fractal_zigzag.lua:154:                p.time = ZigZag.currHighTime
+fractal_zigzag.lua:162:                p1.time = ZigZag.currHighTime
+fractal_zigzag.lua:170:                p2.time = ZigZag.currLowTime
+fractal_zigzag.lua:180:                p.time = ZigZag.currLowTime
+fractal_zigzag.lua:188:                p1.time = ZigZag.currLowTime
+fractal_zigzag.lua:196:                p2.time = ZigZag.currHighTime
+Y:\split_fractal\sf_logger.lua:18:    WriteLog(user_path, "=== ������ ������ SPLIT FRACTAL === | period_time = " .. per
+iod_time .. "; operation = " .. operation .. "; sec_code = " .. sec_code .. "; quantity = " .. quantity, false)
+Y:\split_fractal\sf_logger.lua:20:    WriteLog(debug_path, "=== ������ DEBUG SPLIT FRACTAL === | period_time = " .. per
+iod_time .. "; operation = " .. operation .. "; sec_code = " .. sec_code, false)
+Y:\split_fractal\sf_logic.lua:5:function CheckTimer()
+Y:\split_fractal\sf_logic.lua:6:    local current_time = os.time()
+Y:\split_fractal\sf_logic.lua:7:    if end_time == 0 then end_time = current_time + period_time end
+Y:\split_fractal\sf_logic.lua:8:    if current_time >= end_time then end_time = 0 return true end    
+Y:\split_fractal\sf_read_n_writers.lua:11:    local serverTime = getInfoParam("SERVERTIME")
+Y:\split_fractal\sf_read_n_writers.lua:12:    local logTime = serverTime
+Y:\split_fractal\sf_read_n_writers.lua:13:    if not serverTime or serverTime == "" then
+Y:\split_fractal\sf_read_n_writers.lua:14:        logTime = os.date("%H:%M:%S")
+Y:\split_fractal\sf_read_n_writers.lua:23:        logTime   = logTime
+Y:\split_fractal\sf_read_n_writers.lua:37:                local prefix = string.format("%s;%s;", item.tradeDate, item.l
+ogTime)
+Y:\split_fractal\split_fractal.lua:21:period_time  = 60    -- ����� ���� (1 ��� = 60 ���)
+Y:\split_fractal\split_fractal.lua:22:end_time     = 0     -- ����� ��������� ����
+Y:\split_fractal\split_fractal.lua:314:        if CheckTimer() then
+
+
+

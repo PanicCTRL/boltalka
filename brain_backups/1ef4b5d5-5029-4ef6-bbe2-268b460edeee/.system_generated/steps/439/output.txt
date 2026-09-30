@@ -1,0 +1,59 @@
+
+The command exited with code 0.
+Output:
+            -- Проверка импульса вниз от вершины
+            elseif not isUp and price <= lastFractalUp * (1 - deviation) then
+                trendDir  = -1
+                lineStart = lastFractalUp
+                startBar  = lastBarUp
+                lineEnd   = price
+                endBar    = barIdx
+            end
+        end
+        return
+    end
+
+    -- 3. ФАЗА ТРЕНДА ВВЕРХ (trendDir == 1)
+    if trendDir == 1 then
+        if isUp then
+            -- Тренд продолжается вверх: обновляем максимум (продлеваем линию)
+            if price > lineEnd then
+                lineEnd = price
+                endBar  = barIdx
+            end
+        else
+            -- Появился фрактал вниз: проверяем, истинный ли это разворот
+            if price <= lineEnd * (1 - deviation) then
+                -- РАЗВОРОТ В ТРЕНД ВНИЗ: пик становится началом новой линии
+                trendDir  = -1
+                lineStart = lineEnd
+                startBar  = endBar
+                lineEnd   = price
+                endBar    = barIdx
+            end
+            -- Если откат меньше deviation - игнорируем, тренд вверх в силе
+        end
+
+    -- 4. ФАЗА ТРЕНДА ВНИЗ (trendDir == -1)
+    elseif trendDir == -1 then
+        if not isUp then
+            -- Тренд продолжается вниз: обновляем минимум (продлеваем линию)
+            if price < lineEnd then
+                lineEnd = price
+                endBar  = barIdx
+            end
+        else
+            -- Появился фрактал вверх: проверяем, истинный ли это разворот
+            if price >= lineEnd * (1 + deviation) then
+                -- РАЗВОРОТ В ТРЕНД ВВЕРХ: впадина становится началом новой линии
+                trendDir  = 1
+                lineStart = lineEnd
+                startBar  = endBar
+                lineEnd   = price
+                endBar    = barIdx
+            end
+            -- Если отскок меньше deviation - игнорируем, тренд вниз в силе
+        end
+    end
+end
+

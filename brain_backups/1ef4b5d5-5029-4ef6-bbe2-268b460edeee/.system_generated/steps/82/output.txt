@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+utf-8: 'utf-8' codec can't decode byte 0xc4 in position 11: invalid continuation byte
+cp1251: success, 297 lines
+latin1: success, 297 lines
+

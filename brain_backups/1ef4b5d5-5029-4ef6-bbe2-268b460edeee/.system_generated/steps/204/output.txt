@@ -1,0 +1,28 @@
+
+The command exited with code 0.
+Output:
+commit 5741b403317175c90918ecb3251ac4ff18d2f6c3
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Wed Aug 26 10:55:02 2026 +0300
+
+    refactor: cleanly separate my_fractal and true_fractal into independent folders with unique loggers, move tools to support_pro, cleanup clutter
+
+ SendTransaction.lua                                | 100 ---------
+ fractal_writelog.lua                               |  23 ---
+ fractal_writer.lua                                 | 127 ------------
+ fractal_wrong.lua                                  | 223 ---------------------
+ fractal_wrong_old.lua                              | 115 -----------
+ "fr\321\201_value.txt"                             |   1 -
+ my_fractal.lua                                     |  13 +-
+ my_fractal_old.lua                                 | 115 -----------
+ callback_test.lua => support_pro/callback_test.lua |   0
+ mock_test.html => support_pro/mock_test.html       |   0
+ mock_test.lua => support_pro/mock_test.lua         |   0
+ true_fractal/tf_killstop.lua                       |  40 ++++
+ true_fractal/tf_logger.lua                         |  65 ++++++
+ true_fractal/tf_logic.lua                          |  66 ++++++
+ true_fractal/tf_read_n_writers.lua                 |  86 ++++++++
+ true_fractal/tf_sendtransaction_spbfut.lua         | 109 ++++++++++
+ true_fractal.lua => true_fractal/true_fractal.lua  |  10 +-
+ 17 files changed, 377 insertions(+), 716 deletions(-)
+

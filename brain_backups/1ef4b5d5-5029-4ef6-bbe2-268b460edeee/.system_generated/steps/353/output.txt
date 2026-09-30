@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.lua:10:function CheckTradeFreshness(alltrade)
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:56:function CheckTradeFreshness(alltrade)
+Y:\Knowledge\best_practices\alltrade_reconnect_filter.md:89:    if CheckTradeFreshness(alltrade) then
+
+
+

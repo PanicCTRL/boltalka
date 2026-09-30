@@ -1,0 +1,39 @@
+
+The command exited with code 0.
+Output:
+
+Path                      LineNumber Line                                                                              
+----                      ---------- ----                                                                              
+Y:\STRG\chart_canvas.py          273                 o = f"{int(row['open']):,}".replace(",", " ")                     
+Y:\STRG\chart_canvas.py          326         opens = df_candles["open"].values                                         
+Y:\STRG\chart_canvas.py          331         up_mask = closes >= opens                                                 
+Y:\STRG\chart_canvas.py          348             # 2. ТЕЛА СВЕЧЕЙ (BarGraphItem через y0 и y1 для точной привязки к ...
+Y:\STRG\chart_canvas.py          354                 up_open = opens[up_mask]                                          
+Y:\STRG\chart_canvas.py          356                 up_close_eff = np.maximum(up_close, up_open + 0.5)                
+Y:\STRG\chart_canvas.py          361                     x=up_idx, y0=up_open, y1=up_close_eff, width=bar_width,       
+Y:\STRG\chart_canvas.py          370                 dn_open = opens[down_mask]                                        
+Y:\STRG\chart_canvas.py          372                 dn_open_eff = np.maximum(dn_open, dn_close + 0.5)                 
+Y:\STRG\chart_canvas.py          377                     x=dn_idx, y0=dn_close, y1=dn_open_eff, width=bar_width,       
+Y:\STRG\fractal_zigzag.py         17     :param df_candles: DataFrame со свечами (open, high, low, close, time, bar_...
+Y:\STRG\gui_window.py            189         saved_strat = saved_settings.get("current_strategy", r"Y:\true_fractal\...
+Y:\STRG\gui_window.py            190         self.strategy_file = saved_strat if os.path.exists(saved_strat) else r"...
+Y:\STRG\gui_window.py            822             with open(SETTINGS_FILE, "r", encoding="utf-8") as f:                 
+Y:\STRG\gui_window.py            865             with open(SETTINGS_FILE, "w", encoding="utf-8") as f:                 
+Y:\STRG\gui_window.py           1130                             with open(norm_path, "r", encoding="utf-8", errors=...
+Y:\STRG\gui_window.py           1211         file_path, _ = QFileDialog.getOpenFileName(                               
+Y:\STRG\gui_window.py           1278             (r"Y:\true_fractal\mock_opening.lua", "mock_opening.lua"),            
+Y:\STRG\gui_window.py           1347         file_path, _ = QFileDialog.getOpenFileName(                               
+Y:\STRG\gui_window.py           1451             visible_candles.loc[last_row_idx, "open"] = float(bar_prices[0])      
+Y:\STRG\lua_runner.py             37         with open(self.lua_path, "r", encoding="cp1251", errors="replace") as f:  
+Y:\STRG\lua_runner.py            152         open_real_trade = None                                                    
+Y:\STRG\lua_runner.py            153         open_virt_trade = None                                                    
+Y:\STRG\lua_runner.py            165             if ev_type == "TRADE_OPEN":                                           
+Y:\STRG\lua_runner.py            176                 open_real_trade = {                                               
+Y:\STRG\lua_runner.py            188                 trades.append(open_real_trade)                                    
+Y:\STRG\lua_runner.py            191                 if open_real_trade and open_real_trade["close_time"] is None:     
+Y:\STRG\lua_runner.py            192                     open_real_trade["close_time"] = t                             
+Y:\STRG\lua_runner.py            193                     open_real_trade["close_price"] = p                            
+Y:\STRG\lua_runner.py            194                     open_real_trade["close_reason"] = "TP" if "TAKE" in ev.get(...
+
+
+

@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+56dad17 docs: expand Section 18 with 4-phase Market Regime Classifier (Trend, Triangle Squeeze, Flat)
+

@@ -1,0 +1,99 @@
+
+The command exited with code 0.
+Output:
+commit 5741b403317175c90918ecb3251ac4ff18d2f6c3
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Wed Aug 26 10:55:02 2026 +0300
+
+    refactor: cleanly separate my_fractal and true_fractal into independent folders with unique loggers, move tools to support_pro, cleanup clutter
+
+commit 9a139d52ded6de789afc361ffe0c735d3a438733
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Wed Aug 26 08:20:15 2026 +0300
+
+    fix: replace Cyrillic c with ASCII c in frc_value.txt path in true_fractal.lua
+
+commit 752e4b537eaf9e12f5cd5af69a07f25d40563be3
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Wed Aug 26 08:02:07 2026 +0300
+
+    feat: log loaded fractals to user log and normalize frc_value filename
+
+commit 7eb3d9ab3c20aa83109ae7d463d3e443a897d2b9
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Tue Aug 25 15:15:56 2026 +0300
+
+    fix: revert trade_type from L to M for market orders
+
+commit e960989afbfc3c677190c0002042c801576152bc
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Tue Aug 25 14:51:42 2026 +0300
+
+    feat: implement two-phase handshake (OnOrder/OnTrade) and single-loop LevelCross without blind spots
+
+commit 3a6850f94be0938aa7952f50440dea68fbe4b932
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Tue Aug 25 14:37:21 2026 +0300
+
+    fix: symmetric LevelCross without blind spots and reset pendKill flag
+
+commit f0de44ae378580f80939a2da66b9fc26f819fc44
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Tue Aug 25 08:49:29 2026 +0300
+
+    Fix logging path, add log buffer queue, fix order filtering, cleanup unused variables
+
+commit f39e14b3ec8cf7b678346fdec1f275a5dee56803
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Mon Aug 24 16:54:25 2026 +0300
+
+    feat: increase max stored fractals from 4 to 6
+
+commit e7663242167f954f2c9f7f51c6db58f11bcbd971
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Mon Aug 24 16:38:47 2026 +0300
+
+    feat: track session PnL and daily PnL with pnl_day.txt persistence and 3-line log format
+
+commit 8e42fe8c264e698058840ef7e27bc593467fae5e
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Mon Aug 24 16:23:13 2026 +0300
+
+    fix: open_pos/close_pos fallback in OnOrder (avg_open/avg_close may be 0 if OnTrade hasn't fired yet)
+
+commit f8250054f3450695f3f6ae01a9f92b81b16e8c4d
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Mon Aug 24 09:09:12 2026 +0300
+
+    Add trailing stop (trlPoints) task to TODO.md
+
+commit 0041aa1087d5c25e8f8d945a4d9822a46080957e
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Mon Aug 24 08:29:03 2026 +0300
+
+    add frc_read_n_writers.lua with Read_frc(), load fractals on startup
+
+commit 2f12980b17dda3f7b2a8cc53446d7fc77839e953
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Mon Aug 24 07:54:21 2026 +0300
+
+    output PnL in both points and price steps
+
+commit 6fc66cdda7468a7ffc067111d4886a0ba020226d
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Sun Aug 23 21:17:02 2026 +0300
+
+    add OnTrade, avg price, pnl per trade and total pnl logging
+
+commit d5aea6e2f4fef05d8f0657e1cc703faaf260fb6a
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Sun Aug 23 20:21:29 2026 +0300
+
+    prevent new entry cycle on same lastFractal when startPrice is 0
+
+commit 2f6a93272116065e40fbd2c07f1af433b0e7b9d3
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Sun Aug 23 16:55:17 2026 +0300
+
+    add true_fractal.lua main file for new robot
+

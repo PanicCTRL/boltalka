@@ -1,0 +1,17 @@
+
+The command exited with code 0.
+Output:
+
+FullName                                             
+--------                                             
+Y:\TODO                                              
+Y:\Knowledge\best_practices\TODO_snippet_structure.md
+Y:\my_fractal\TODO.md                                
+Y:\STRG\TODO_STRG.md                                 
+Y:\TODO\TODO.md                                      
+Y:\true_fractal\TODO_TRUE_FRACTAL.md                 
+Y:\waterfall_flip\waterfall_todo.md                  
+I:\fractals\true_fractal\TODO_TRUE_FRACTAL.md        
+
+
+

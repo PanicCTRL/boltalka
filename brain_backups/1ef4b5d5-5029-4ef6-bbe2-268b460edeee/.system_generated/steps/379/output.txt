@@ -1,0 +1,34 @@
+
+The command exited with code 0.
+Output:
+## Эталонная реализация в коде
+
+`lua
+-- ==========================================
+-- ПАРАМЕТРЫ ЗАЩИТЫ ОТ СТАРЫХ СДЕЛОК
+-- ==========================================
+max_trade_lag_sec = 8       -- Порог возраста сделки в секундах
+min_stable_sec    = 5       -- Сколько секунд поток должен быть свежим для разрешения торговли
+online_start      = nil     -- Момент начала стабильного онлайн-потока (os.time)
+
+function CheckTradeFreshness(alltrade)
+    if not alltrade or not alltrade.datetime then return false end
+
+    local tr_sec  = os.time(alltrade.datetime)
+    local pc_sec  = os.time()
+    local lag_sec = pc_sec - tr_sec
+
+    -- Тик считается свежим, если лаг не превышает порог (с допуском -2 сек на рассинхрон часов)
+    local is_fresh = (lag_sec <= max_trade_lag_sec) and (lag_sec >= -2)
+
+    if is_fresh then
+        if not online_start then
+            online_start = pc_sec  -- Фиксируем момент начала свежего потока
+        end
+    else
+        online_start = nil  -- Сброс: обнаружен старый тик
+    end
+
+    -- Торговля разрешена только если поток уверенно свежий на протяжении min_stable_sec секунд
+    return is_fresh and online_start ~= nil and (pc_sec - online_start) >= min_stable_sec
+

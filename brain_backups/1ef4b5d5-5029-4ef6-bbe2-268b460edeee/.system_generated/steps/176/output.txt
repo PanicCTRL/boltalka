@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+
+Name                 Length LastWriteTime      
+----                 ------ -------------      
+fractal_zigzag.lua     6842 14.09.2026 19:50:08
+mock_opening.lua      19909 12.09.2026 12:24:50
+TODO_TRUE_FRACTAL.md  13405 26.09.2026 9:35:13 
+
+
+

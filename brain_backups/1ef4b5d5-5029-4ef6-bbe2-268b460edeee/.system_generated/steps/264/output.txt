@@ -1,0 +1,22 @@
+
+The command exited with code 0.
+Output:
+On branch split_fractals
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .agents/AGENTS.md
+	modified:   true_fractal/TODO_TRUE_FRACTAL.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	true_fractal/split_f_logic.lua
+	true_fractal/tf_killstop.lua
+	true_fractal/tf_logger.lua
+	true_fractal/tf_logic.lua
+	true_fractal/tf_read_n_writers.lua
+	true_fractal/tf_sendtransaction_spbfut.lua
+	true_fractal/true_fractal.lua
+
+no changes added to commit (use "git add" and/or "git commit -a")
+

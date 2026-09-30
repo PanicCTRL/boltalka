@@ -1,0 +1,54 @@
+
+The command exited with code 0.
+Output:
+    end
+
+    if (operation == "B" and isSell) or (operation == "S" and isBuy) then
+        close_cost = close_cost + trade.price * trade.qty
+        close_qty  = close_qty  + trade.qty
+        avg_close  = close_cost / close_qty
+
+        tradeDone = true
+        if orderDone then
+            FinalizeTrade()
+        end
+    end
+end
+
+function OnAllTrade(alltrade)
+    if alltrade.class_code ~= class_code or alltrade.sec_code ~= sec_code then return end
+    if not CheckTradeFreshness(alltrade) then return end
+    if alltrade.price == currentPrice then return end
+    prevPrice = currentPrice
+    currentPrice = alltrade.price
+    UpdateLimits()
+    LevelCross()
+end 
+
+function OnDisconnected()
+    message("Нет связи с сервером.", 2)
+end
+
+function OnConnected(flag)
+    message("Соединение с сервером восстановлено.", 1)
+end
+
+function OnStop()
+    is_run = false
+    LogStop()
+    FlushLogs()
+    return 3000
+end
+
+function main()
+    LogStart()
+    pnl_day_pts, pnl_day_steps = Read_pnl_day()
+    fractals = Read_frc(file)
+    if #fractals > 0 then LogStartFractals() end
+    while is_run do
+        FlushLogs()
+        local rawUp   = tonumber(getParamEx(class_code, sec_code, "PRICEMAX").param_value) or 0
+        local rawDown = tonumber(getParamEx(class_code, sec_code, "PRICEMIN").param_value) or 0
+
+        limitUp   = tonumber(string.format("%." .. dec .. "f", rawUp))
+

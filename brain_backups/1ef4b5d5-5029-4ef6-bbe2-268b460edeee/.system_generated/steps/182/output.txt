@@ -1,0 +1,32 @@
+
+The command exited with code 0.
+Output:
+On branch true_fractal
+Your branch is up to date with 'origin/true_fractal'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   TODO.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+v1.0.0-stable
+  fractal_wrong
+  futures_trading
+  main
+  stocks_test
+* true_fractal
+  write_fractals_file
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/fractal_wrong
+  remotes/origin/futures_trading
+  remotes/origin/main
+  remotes/origin/stocks_test
+  remotes/origin/true_fractal
+  remotes/origin/write_fractals_file
+9d2b9b7 Revert "Set period_time to 300 seconds (5 minute timeframe)"
+343596b Set period_time to 300 seconds (5 minute timeframe)
+dfc37fa Add Section 19: Reversal robots and direction filter to TODO
+49adb1b docs(todo): add backlog task on blocking virtual trades when in real position
+570911c feat: add OnAllTrade freshness filter (anti-reconnect lag) and connection status callbacks
+

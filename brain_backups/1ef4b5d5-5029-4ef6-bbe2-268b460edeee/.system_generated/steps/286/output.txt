@@ -1,0 +1,19 @@
+
+The command exited with code 0.
+Output:
+[main (root-commit) 90dded1] feat: initial commit for split_fractal robot with sf_ architecture and separated fractal_up/fractal_down
+ 8 files changed, 758 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 sf_killstop.lua
+ create mode 100644 sf_logger.lua
+ create mode 100644 sf_logic.lua
+ create mode 100644 sf_read_n_writers.lua
+ create mode 100644 sf_sendtransaction_spbfut.lua
+ create mode 100644 split_fractal.lua
+commit 90dded10306dffd334e332e6b33e7af52c78acd9
+Author: PanicCTRL <zuew.ewg@gmail.com>
+Date:   Sat Sep 26 11:29:22 2026 +0300
+
+    feat: initial commit for split_fractal robot with sf_ architecture and separated fractal_up/fractal_down
+

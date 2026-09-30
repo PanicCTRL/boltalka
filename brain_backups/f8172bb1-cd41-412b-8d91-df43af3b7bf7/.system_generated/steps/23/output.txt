@@ -1,0 +1,66 @@
+
+The command exited with code 0.
+Output:
+Index: 445, Type: USER_INPUT, Created: 2026-09-29T03:54:24Z
+Content: <USER_REQUEST>
+EMA (Exponential Moving Average) -- для нее нужен close свечи? Правильно?
+
+С тало понятно, ноя забуду.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-29T06:54:
+Index: 446, Type: PLANNER_RESPONSE, Created: 2026-09-29T03:54:24Z
+Index: 447, Type: GENERIC, Created: 2026-09-29T03:54:34Z
+Content: Created At: 2026-09-29T06:54:34+03:00
+Completed At: 2026-09-29T06:54:35+03:00
+
+The command exited with code 0.
+Output:
+CHEAT_SHEET_ADDED
+
+
+Index: 448, Type: PLANNER_RESPONSE, Created: 2026-09-29T03:54:35Z
+Content: **Да, абсолютно правильно!** Для EMA берётся **строго цена закрытия свечи (`close`)**.
+
+Почему именно `close`? 
+Внутри 5-минутки цена может беситься, метаться вверх и вниз — это рыночный шум, формирую
+Index: 449, Type: USER_INPUT, Created: 2026-09-29T03:59:46Z
+Content: <USER_REQUEST>
+ТО есть нам надо номер и close свечи для MACD от старых к новым. Не все свечи, а только номер для количества и close
+
+А для регрессионного тренда надо линия зигзага. Для нее надо время 
+Index: 450, Type: PLANNER_RESPONSE, Created: 2026-09-29T03:59:46Z
+Content: Да! Ты абсолютно точно и кристально чисто всё разложил по полочкам:
+* **Для MACD** нужны **только цены `close`** по порядку слева направо. Больше вообще ничего.
+* **Линия Зигзага** даёт нам **границы*
+Index: 451, Type: USER_INPUT, Created: 2026-09-29T04:02:38Z
+Content: <USER_REQUEST>
+Ээээ... ты мне формулы дай с пояснениями, а не текст
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-29T07:02:38+03:00.
+</ADDITIONAL_METADATA>
+Index: 452, Type: PLANNER_RESPONSE, Created: 2026-09-29T04:02:39Z
+Content: Держи строгие формулы метода наименьших квадратов (МНК) с подробными пояснениями каждого символа.
+
+---
+
+### 1. Исходные данные (что подаём на вход)
+У нас есть отрезок из $N$ свечей, которые дал Зигзаг
+Index: 451, Type: USER_INPUT, Created: 2026-09-29T04:05:27Z
+Content: <USER_REQUEST>
+Ээээ... ты мне формулы дай с пояснениями, а не текст.
+И с коэффициентом пирсона.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-29T07:05:27+03:00.
+</ADDITIONAL
+Index: 452, Type: PLANNER_RESPONSE, Created: 2026-09-29T04:05:27Z
+Content: Поняла, переходим на строгий язык формул! 
+
+Вот полная математическая база линейной регрессии, коэффициента Пирсона и границ канала с точными расшифровками каждого символа.
+
+---
+
+### 1. Входные данные
+

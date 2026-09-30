@@ -1,0 +1,1 @@
+{"File":"Y:\\STRG\\chart_canvas.py","LineNumber":110,"LineContent":"class ChartCanvas(pg.PlotWidget):"}

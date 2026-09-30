@@ -1,0 +1,3 @@
+*.txt
+!frc_value.txt
+!pnl_day.txt

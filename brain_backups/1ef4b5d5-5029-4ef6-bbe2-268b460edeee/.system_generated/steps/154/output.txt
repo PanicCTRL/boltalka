@@ -1,0 +1,36 @@
+
+The command exited with code 0.
+Output:
+Y:\true_fractal\TODO_TRUE_FRACTAL.md (utf-8): 68 lines
+54:   - **5. � � � � � (% � �):** � � � (0.5% � � �.�.) � � �, � � � � � � � �.
+55:   - **6. � � � (Stop-Out Anchor):** � �, � � � �, � � � � � � � � � � �.
+56:   - **7. �-� � (MTF Micro-Trailing):** � � � � � � (5M) � � (1M � �) � � � �. � � � � � �.
+57:   - **8. � � � � � (Velocity-Adaptive Trailing):** � � � � � (/dt$) � � � � � � � 1M/� � � � �, � � � � � 5M.
+58: - [ ] **� � Smart Money (Price Action & Liquidity):**
+59:   - **9. � � (Fractal / Swing Pivot Trailing):** � � � � � � � � (Higher Low) � � � � � � (Lower High) � �. � � � � � � �.
+60:   - **10. � Donchian / N-bar Extreme (Chandelier Exit):** � � � � $ � (min(low[n])), � � � �.
+61:   - **11. � � � � (Candle Body / Wick Filter Trailing):** � � � � � (Open/Close), � � � � � � � � � � � � � � � � � �.
+62:   - **12. � � � � (FVG / Fair Value Gap Trailing):** � � � � � � 3-� � � � � �.
+63: - [ ] **�, � � �:**
+64:   - **13. � VWAP & � (SPBFUT / Order Flow):** � � � � � � � � � (VWAP) � � $-1\sigma$.
+65:   - **14. � Order Flow & Delta Trailing:** � � � � � � � (POC �) � � � � � (Absorption) � �.
+66:   - **15. � � � (Linear Regression StdDev Trailing):** � � � � � � � � ( - 2\sigma$).
+67:   - **16. � / � � (Stealth In-Memory Stop):** � � � � � � � � � � � (� � � �), � � � � � � � � OnAllTrade.
+68:   - **17. � � � (Tape Speed / Velocity Decay):** � � � � � � � � � � �.
+Y:\my_fractal\TODO.md (cp1251): 322 lines
+308:   - **5. � � � � � (% � �):** � � � (0.5% � � �.�.) � � �, � � � � � � � �.
+309:   - **6. � � � (Stop-Out Anchor):** � �, � � � �, � � � � � � � � � � �.
+310:   - **7. �-� � (MTF Micro-Trailing):** � � � � � � (5M) � � (1M � �) � � � �. � � � � � �.
+311:   - **8. � � � � � (Velocity-Adaptive Trailing):** � � � � � (/dt$) � � � � � � � 1M/� � � � �, � � � � � 5M.
+312: - [ ] **� � Smart Money (Price Action & Liquidity):**
+313:   - **9. � � (Fractal / Swing Pivot Trailing):** � � � � � � � � (Higher Low) � � � � � � (Lower High) � �. � � � � � � �.
+314:   - **10. � Donchian / N-bar Extreme (Chandelier Exit):** � � � � $ � (min(low[n])), � � � �.
+315:   - **11. � � � � (Candle Body / Wick Filter Trailing):** � � � � � (Open/Close), � � � � � � � � � � � � � � � � � �.
+316:   - **12. � � � � (FVG / Fair Value Gap Trailing):** � � � � � � 3-� � � � � �.
+317: - [ ] **�, � � �:**
+318:   - **13. � VWAP & � (SPBFUT / Order Flow):** � � � � � � � � � (VWAP) � � $-1\sigma$.
+319:   - **14. � Order Flow & Delta Trailing:** � � � � � � � (POC �) � � � � � (Absorption) � �.
+320:   - **15. � � � (Linear Regression StdDev Trailing):** � � � � � � � � ( - 2\sigma$).
+321:   - **16. � / � � (Stealth In-Memory Stop):** � � � � � � � � � � � (� � � �), � � � � � � � � OnAllTrade.
+322:   - **17. � � � (Tape Speed / Velocity Decay):** � � � � � � � � � � �.
+

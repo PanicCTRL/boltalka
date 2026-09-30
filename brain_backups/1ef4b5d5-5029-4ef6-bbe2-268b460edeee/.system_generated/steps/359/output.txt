@@ -1,0 +1,34 @@
+
+The command exited with code 0.
+Output:
+        FlushLogs()
+        local rawUp   = tonumber(getParamEx(class_code, sec_code, "PRICEMAX").param_value) or 0
+        local rawDown = tonumber(getParamEx(class_code, sec_code, "PRICEMIN").param_value) or 0
+
+        limitUp   = tonumber(string.format("%." .. dec .. "f", rawUp))
+        limitDown = tonumber(string.format("%." .. dec .. "f", rawDown))
+
+        price_limit = (operation == "B") and limitDown or limitUp
+        if CheckTimer() then
+            PushPrice()
+            GetFractal()
+            
+            local maxStr = table.concat(maxPrices, ", ")
+            local minStr = table.concat(minPrices, ", ")
+            local upStr   = table.concat(fractal_up, ", ")
+            local downStr = table.concat(fractal_down, ", ")
+            local fracStr = "up=[" .. upStr .. "] down=[" .. downStr .. "]"
+            
+            frc_value = upStr .. " | " .. downStr
+            if #fractal_up > 0 or #fractal_down > 0 then
+                FractalTransfer(frc_value)
+            end
+
+            ResetLimits()
+        end
+        
+        FlushLogs()
+        sleep(5000)
+    end
+end
+

@@ -1,0 +1,50 @@
+
+The command exited with code 0.
+Output:
+
+  -- 6. ОБРАБОТКА ПРОБОЕВ УРОВНЕЙ
+  -- ============================================================================
+> function ProcessCrosses()
+      if prevPrice == 0 then return end
+  
+      -- 1. ЭТАП ДО КОРИДОРА: РАБОТАЕТ ЦЕНА ОТКРЫТИЯ ДНЯ (до 5 свечей)
+      if isStarted and not openDayForgotten and openDayPrice > 0 then
+          -- Пробой уровня открытия снизу вверх -> вход в LONG
+          local crossOpenUp = (prevPrice < openDayPrice and currentPrice >= openDayPrice)
+          if crossOpenUp and not opn and not longExhausted and count_t > 0 then
+              longLevel = openDayPrice
+              startPrice = openDayPrice
+              LogMockEvent("CROSS_OPEN_UP", "Пробой открытия дня снизу вверх. Вход в LONG")
+              OpenReal(openDayPrice)
+          end
+  
+          -- Пробой уровня открытия сверху вниз -> вход в SHORT
+          local crossOpenDown = (prevPrice > openDayPrice and currentPrice <= openDayPrice)
+          if not isUpTrend then
+              if upperCorridor > 0 then
+>                 local crossUpperDown = (prevPrice > upperCorridor and currentPrice <= upperCorridor)
+>                 if crossUpperDown and not virt and not shortExhausted and count_v > 0 then
+                      LogMockEvent("CROSS_UPPER_DOWN", "Возврат под верхнюю границу " .. tostring(upperCorridor) .. " с
+верху вниз. Вход в SHORT")
+                      OpenVirt(upperCorridor)
+                  end
+              end
+  
+              if prevUpperCorridor > 0 and prevUpperCorridor ~= upperCorridor then
+                  local crossPrevUpperDown = (prevPrice > prevUpperCorridor and currentPrice <= prevUpperCorridor)
+                  if crossPrevUpperDown and not virt and not prevShortExhausted and prevCount_v > 0 then
+                      LogMockEvent("CROSS_PREV_UPPER_DOWN", "Возврат под предыдущую верхнюю границу " .. tostring(prevU
+pperCorridor) .. " сверху вниз. Вход в SHORT")
+                      OpenVirt(prevUpperCorridor)
+                  end
+              end
+          end
+  
+          -- Нижние границы (LONG): разрешены ТОЛЬКО если нет нисходящего тренда
+  
+      -- 2. Обработка пересечений уровней
+>     ProcessCrosses()
+  end
+
+
+
