@@ -1,0 +1,40 @@
+Collecting PyQt6
+  Using cached pyqt6-6.11.0-cp310-abi3-win_amd64.whl.metadata (2.2 kB)
+Collecting pyqtgraph
+  Using cached pyqtgraph-0.14.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting lupa
+  Using cached lupa-2.8-cp312-cp312-win_amd64.whl.metadata (62 kB)
+Collecting pandas
+  Downloading pandas-3.0.6-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Collecting numpy
+  Downloading numpy-2.5.3-cp312-cp312-win_amd64.whl.metadata (6.6 kB)
+Collecting PyQt6-sip<14,>=13.8 (from PyQt6)
+  Using cached pyqt6_sip-13.12.0-cp312-cp312-win_amd64.whl.metadata (516 bytes)
+Collecting PyQt6-Qt6<6.12.0,>=6.11.0 (from PyQt6)
+  Using cached pyqt6_qt6-6.11.2-py3-none-win_amd64.whl.metadata (552 bytes)
+Collecting colorama (from pyqtgraph)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting python-dateutil>=2.8.2 (from pandas)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting tzdata (from pandas)
+  Downloading tzdata-2026.4-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Using cached pyqt6-6.11.0-cp310-abi3-win_amd64.whl (6.8 MB)
+Using cached pyqtgraph-0.14.0-py3-none-any.whl (1.9 MB)
+Using cached lupa-2.8-cp312-cp312-win_amd64.whl (1.9 MB)
+Downloading pandas-3.0.6-cp312-cp312-win_amd64.whl (9.7 MB)
+   ---------------------------------------- 9.7/9.7 MB 9.7 MB/s eta 0:00:00
+Downloading numpy-2.5.3-cp312-cp312-win_amd64.whl (12.6 MB)
+   ---------------------------------------- 12.6/12.6 MB 9.6 MB/s eta 0:00:00
+Using cached pyqt6_qt6-6.11.2-py3-none-win_amd64.whl (78.0 MB)
+Using cached pyqt6_sip-13.12.0-cp312-cp312-win_amd64.whl (53 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading tzdata-2026.4-py2.py3-none-any.whl (347 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: PyQt6-Qt6, tzdata, six, PyQt6-sip, numpy, lupa, colorama, python-dateutil, pyqtgraph, PyQt6, pandas
+Successfully installed PyQt6-6.11.0 PyQt6-Qt6-6.11.2 PyQt6-sip-13.12.0 colorama-0.4.6 lupa-2.8 numpy-2.5.3 pandas-3.0.6 pyqtgraph-0.14.0 python-dateutil-2.9.0.post0 six-1.17.0 tzdata-2026.4
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: Y:\SIGNAL\.venv\Scripts\python.exe -m pip install --upgrade pip

@@ -1,0 +1,24 @@
+
+The command exited with code 0.
+Output:
+-- tick_parser.lua
+-- Модуль разбора тиковых файлов Финам и сборки 5-минутных свечей (M5)
+-- Сохраняет результаты в 4 текстовых файла для робота и возвращает таблицу свечей:
+-- 1. candles.txt      (date;time;open;high;low;close;volume)
+-- 2. high_prices.txt  (date;time;high)
+-- 3. low_prices.txt   (date;time;low)
+-- 4. close_prices.txt (date;time;close)
+
+function ParseTicks(input_file, output_dir, period_time)
+    if not input_file then return nil, 'Не указан входной файл' end
+    output_dir = output_dir or 'Y:\\SIGNAL'
+    period_time = period_time or 300 -- 5 минут = 300 секунд
+
+    local candles_file = output_dir .. '\\candles.txt'
+    local high_file    = output_dir .. '\\high_prices.txt'
+    local low_file     = output_dir .. '\\low_prices.txt'
+    local close_file   = output_dir .. '\\close_prices.txt'
+
+    local f_candles = io.open(candles_file, 'w')
+    local f_high    = io.open(high_file, 'w')
+

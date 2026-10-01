@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+Latest in folder: MXZ6_261001_261001.txt
+

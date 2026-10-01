@@ -1,0 +1,13 @@
+
+The command exited with code 0.
+Output:
+
+Name             Length LastWriteTime      
+----             ------ -------------      
+candles.txt        9352 01.10.2026 20:02:43
+high_prices.txt    4396 01.10.2026 20:02:43
+low_prices.txt     4396 01.10.2026 20:02:43
+close_prices.txt   4396 01.10.2026 20:02:43
+
+
+

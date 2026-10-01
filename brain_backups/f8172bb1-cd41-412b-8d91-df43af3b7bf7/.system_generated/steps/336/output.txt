@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+SUCCESS! Loaded candles into CandlestickItem: 157
+Window title: SIGNAL � [MXZ6_261001_261001.txt | 157 � M5 | 06:55 - 19:55]
+Status bar message: �: MXZ6_261001_261001.txt | �: 157 | �: 20261001 | � � Lua: 0.254 �.
+

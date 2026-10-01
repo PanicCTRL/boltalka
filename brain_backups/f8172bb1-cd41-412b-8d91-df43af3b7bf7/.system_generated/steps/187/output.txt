@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+warning: in the working copy of 'SIGNAL/run_signal.bat', LF will be replaced by CRLF the next time Git touches it
+[main 5c38755] feat: add run_signal.bat launcher
+ 1 file changed, 4 insertions(+)
+ create mode 100644 SIGNAL/run_signal.bat
+To https://github.com/PanicCTRL/boltalka.git
+   dbc9b45..5c38755  main -> main
+

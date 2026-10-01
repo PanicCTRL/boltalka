@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+
+Name                             Length LastWriteTime      
+----                             ------ -------------      
+brain_backups                           30.09.2026 21:37:16
+SIGNAL                                  01.10.2026 19:42:25
+split_fractal                           27.09.2026 22:00:45
+dialog_1ef4b5d5_split_fractal.md 217387 30.09.2026 21:37:07
+dialog_current_signal.md         88943  30.09.2026 21:37:07
+README.md                        3797   30.09.2026 21:37:24
+
+
+

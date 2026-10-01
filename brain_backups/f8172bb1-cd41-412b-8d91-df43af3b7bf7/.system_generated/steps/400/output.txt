@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+
+Name                  Length LastWriteTime      
+----                  ------ -------------      
+chunks                       30.09.2026 6:22:47 
+transcript.jsonl      571001 01.10.2026 20:40:39
+transcript_full.jsonl 865580 01.10.2026 20:40:39
+
+
+

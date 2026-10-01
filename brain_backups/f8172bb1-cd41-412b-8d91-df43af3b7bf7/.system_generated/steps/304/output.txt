@@ -1,0 +1,22 @@
+
+The command exited with code 0.
+Output:
+
+Name                   Length  LastWriteTime      
+----                   ------  -------------      
+.venv                          01.10.2026 7:34:29 
+__pycache__                    01.10.2026 12:33:37
+.gitignore             53      01.10.2026 7:35:53 
+candles.txt            12063   01.10.2026 19:41:56
+chart_canvas.py        3528    30.09.2026 17:31:03
+close_prices.txt       5684    01.10.2026 19:41:56
+high_prices.txt        5684    01.10.2026 19:41:56
+low_prices.txt         5684    01.10.2026 19:41:56
+main.py                1179    01.10.2026 7:07:53 
+MXZ6_261001_261001.txt 3147451 01.10.2026 19:56:32
+run_signal.bat         83      01.10.2026 7:35:49 
+tick_parser.lua        4303    01.10.2026 19:42:15
+TODO_SIGNAL.md         13767   01.10.2026 19:42:36
+
+
+

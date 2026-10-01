@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+[main 102bdbe] feat: add tick_parser.lua to parse ticks into M5 candles and write price files
+ 1 file changed, 113 insertions(+)
+ create mode 100644 SIGNAL/tick_parser.lua
+To https://github.com/PanicCTRL/boltalka.git
+   071bf48..102bdbe  main -> main
+

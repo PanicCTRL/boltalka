@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+warning: in the working copy of 'SIGNAL/TODO_SIGNAL.md', LF will be replaced by CRLF the next time Git touches it
+[main b48d891] docs: specify candle range 3..max and settings persistence in TODO_SIGNAL.md
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+To https://github.com/PanicCTRL/boltalka.git
+   6460c8e..b48d891  main -> main
+

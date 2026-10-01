@@ -1,0 +1,11 @@
+
+The command exited with code 0.
+Output:
+
+Name                                 Length LastWriteTime     
+----                                 ------ -------------     
+1ef4b5d5-5029-4ef6-bbe2-268b460edeee        23.09.2026 5:46:29
+f8172bb1-cd41-412b-8d91-df43af3b7bf7        30.09.2026 6:22:47
+
+
+

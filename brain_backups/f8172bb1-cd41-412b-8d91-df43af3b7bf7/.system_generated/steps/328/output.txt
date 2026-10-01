@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+Y:\SIGNAL\tick_loader.py:56: SyntaxWarning: invalid escape sequence '\.'
+  � � � � � � � � � � � Y:\.
+Latest found: .\MXZ6_261001_261001.txt
+Total candles: 157
+First: {'date': '20261001', 'time': '06:55:00', 'open': 229100.0, 'high': 229100.0, 'low': 229100.0, 'close': 229100.0, 'volume': 101}
+Last: {'date': '20261001', 'time': '19:55:00', 'open': 229800.0, 'high': 229900.0, 'low': 229725.0, 'close': 229875.0, 'volume': 332}
+

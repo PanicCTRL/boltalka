@@ -1,0 +1,16 @@
+
+The command exited with code 0.
+Output:
+
+FullName                  
+--------                  
+Y:\STRG\chart_canvas.py   
+Y:\STRG\fractal_zigzag.py 
+Y:\STRG\gui_window.py     
+Y:\STRG\lua_runner.py     
+Y:\STRG\main.py           
+Y:\STRG\theme.py          
+Y:\STRG\tick_aggregator.py
+
+
+

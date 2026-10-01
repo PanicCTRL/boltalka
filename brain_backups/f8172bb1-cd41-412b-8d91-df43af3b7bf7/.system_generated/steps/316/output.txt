@@ -1,0 +1,7 @@
+
+The command exited with code 0.
+Output:
+Parsed bars: 157
+Bar 1: {'time': '06:55:00', 'volume': 101, 'close': 229100, 'low': 229100, 'open': 229100, 'high': 229100, 'date': '20261001'}
+Bar last: {'time': '19:55:00', 'volume': 332, 'close': 229875, 'low': 229725, 'open': 229800, 'high': 229900, 'date': '20261001'}
+

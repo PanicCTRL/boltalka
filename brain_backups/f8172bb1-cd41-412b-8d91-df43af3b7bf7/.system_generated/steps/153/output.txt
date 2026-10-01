@@ -1,0 +1,19 @@
+The following changes were made by the replace_file_content tool to: Y:\SIGNAL\TODO_SIGNAL.md. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -38,8 +38,11 @@
+   - Нижний `PlotItem` (~30% высоты): панель осциллятора MACD с нулевой линией.
+   - Связка осей по времени: `plot_macd.setXLink(plot_candles)`.
+ - [ ] 1.3. Проверить открытие окна и синхронный зум/скролл пустых панелей (старт по центру экрана).
+-- [ ] 1.4. [Улучшение GUI] **Сплиттер (Splitter / QSplitter)**: возможность перетаскивать разделительную полосу между свечами и MACD мышкой (как в TradingView), динамически меняя пропорции 70/30, 50/50, 90/10 или сворачивая нижний график в 0.
+-- [ ] 1.5. [Управление слоями] **Панель «Лампочки» (Visibility Toggles)**:
++- [ ] 1.4. [Улучшение GUI] **Система трёх сплиттеров (Triple Splitter Architecture)**:
++  - **Сплиттер графиков (поперечный)**: разделитель между верхним графиком свечей и нижним графиком MACD — таскаем мышкой вверх/вниз для изменения пропорций высоты (70/30, 50/50, 100/0).
++  - **Сплиттер бокового меню (продольный)**: разделитель между центральным холстом с графиками и правой панелью управления (меню с лампочками и настройками) — таскаем мышкой влево/вправо для изменения ширины панели.
++  - **Сплиттер/слайдер диапазона истории (Range Slider)**: интерактивные подвижные границы (сплиттер интервала) на шкале времени, позволяющие мышкой сужать/растягивать рабочий диапазон дней.
++- [ ] 1.5. [Управление слоями] **Панель «Лампочки» (Visibility Toggles)** в правом боковом меню:
+   - Возможность индивидуально гасить и зажигать любой элемент графика (чекбоксы/иконки-лампочки):
+     - Свечи (вкл/выкл)
+     - Линии EMA и скользящие средние (вкл/выкл)
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

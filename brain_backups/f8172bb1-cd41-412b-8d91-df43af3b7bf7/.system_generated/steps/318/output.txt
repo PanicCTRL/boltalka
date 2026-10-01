@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+QPicture works, rect: PyQt6.QtCore.QRect(0, 0, 10, 10)
+

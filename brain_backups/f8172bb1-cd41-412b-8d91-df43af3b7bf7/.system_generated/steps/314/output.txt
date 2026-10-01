@@ -1,0 +1,8 @@
+
+The command exited with code 1.
+Output:
+  File "<string>", line 1
+    import lupa; from lupa import LuaRuntime; lua = LuaRuntime(unpack_returned_tuples=True); with open('tick_parser.lua', 'r', encoding='cp1251') as f: lua.execute(f.read()); candles = lua.globals().ParseTicks('MXZ6_261001_261001.txt', 'Y:/SIGNAL', 300); print('Parsed bars count:', len(candles)); print('First candle:', dict(candles[1])); print('Last candle:', dict(candles[len(candles)]))
+                                                                                             ^^^^
+SyntaxError: invalid syntax
+

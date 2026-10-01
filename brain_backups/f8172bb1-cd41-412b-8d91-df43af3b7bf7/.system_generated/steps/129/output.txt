@@ -1,0 +1,86 @@
+
+The command exited with code 0.
+Output:
+<truncated 390 lines>
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/6/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/60/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/62/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/64/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/66/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/68/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/70/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/74/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/76/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/78/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/8/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/80/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/82/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/84/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/86/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/88/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/94/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.system_generated/steps/96/output.txt
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.user_uploaded/media_1790402038133.png
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.user_uploaded/media_1790402198253.png
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/.user_uploaded/media_1790652992688.png
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/scratch/create_split_fractal.py
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/scratch/create_split_fractal.py.metadata.json
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/scratch/update_logger.py
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/scratch/update_logger.py.metadata.json
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/scratch/update_tf.py
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/scratch/update_tf.py.metadata.json
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/scratch/update_todo.py
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/scratch/update_todo.py.metadata.json
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/scratch/write_todo.py
+ create mode 100644 brain_backups/1ef4b5d5-5029-4ef6-bbe2-268b460edeee/scratch/write_todo.py.metadata.json
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/logs/chunks/transcript/00000000.jsonl
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/logs/chunks/transcript/00000001.jsonl
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/logs/chunks/transcript_full/00000000.jsonl
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/logs/chunks/transcript_full/00000001.jsonl
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/logs/chunks/transcript_full/00000002.jsonl
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/logs/chunks/transcript_full/00000003.jsonl
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/logs/transcript.jsonl
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/logs/transcript_full.jsonl
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/messages/eef44a8c-baac-4ae7-9fb8-8152b5107551.json
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/messages/read.json
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/101/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/103/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/113/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/115/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/117/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/119/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/13/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/15/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/17/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/19/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/21/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/23/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/25/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/27/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/29/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/3/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/33/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/41/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/45/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/49/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/5/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/53/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/55/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/57/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/63/output.txt
+ create mode 100644 brain_backups/f8172bb1-cd41-412b-8d91-df43af3b7bf7/.system_generated/steps/99/output.txt
+ create mode 100644 dialog_1ef4b5d5_split_fractal.md
+ create mode 100644 dialog_current_signal.md
+ create mode 100644 split_fractal/.gitignore
+ create mode 100644 split_fractal/README.md
+ create mode 100644 split_fractal/TODO_SPLIT_FRACTAL.md
+ create mode 100644 split_fractal/sf_killstop.lua
+ create mode 100644 split_fractal/sf_logger.lua
+ create mode 100644 split_fractal/sf_logic.lua
+ create mode 100644 split_fractal/sf_read_n_writers.lua
+ create mode 100644 split_fractal/sf_sendtransaction_spbfut.lua
+ create mode 100644 split_fractal/split_fractal.lua
+To https://github.com/PanicCTRL/boltalka.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+

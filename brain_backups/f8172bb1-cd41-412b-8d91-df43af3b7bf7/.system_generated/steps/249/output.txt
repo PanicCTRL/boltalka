@@ -1,0 +1,23 @@
+The following changes were made by the replace_file_content tool to: Y:\SIGNAL\TODO_SIGNAL.md. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -31,13 +31,13 @@
+ 
+ ## 3. Дорожная карта разработки (7 этапов)
+ 
+-### [ ] ЭТАП 1: Каркас графического канваса (`chart_canvas.py` + `main.py`)
+-- [ ] 1.1. Создать главное окно `main.py` с черной темой в стиле QUIK/TradingView.
+-- [ ] 1.2. Реализовать `chart_canvas.py` на базе `GraphicsLayoutWidget`:
++### [x] ЭТАП 1: Каркас графического канваса (`chart_canvas.py` + `main.py`) (Сделано)
++- [x] 1.1. Создать главное окно `main.py` с черной темой в стиле QUIK/TradingView.
++- [x] 1.2. Реализовать `chart_canvas.py` на базе `GraphicsLayoutWidget`:
+   - Верхний `PlotItem` (~70% высоты): ценовой график для свечей и трендов.
+   - Нижний `PlotItem` (~30% высоты): панель осциллятора MACD с нулевой линией.
+   - Связка осей по времени: `plot_macd.setXLink(plot_candles)`.
+-- [ ] 1.3. Проверить открытие окна и синхронный зум/скролл пустых панелей (старт по центру экрана).
++- [x] 1.3. Проверить открытие окна и синхронный зум/скролл пустых панелей (старт по центру экрана).
+ - [ ] 1.4. [Улучшение GUI] **Система трёх сплиттеров (Triple Splitter Architecture)**:
+   - **Сплиттер графиков (поперечный)**: разделитель между верхним графиком свечей и нижним графиком MACD — таскаем мышкой вверх/вниз для изменения пропорций высоты (70/30, 50/50, 100/0).
+   - **Сплиттер бокового меню (продольный)**: разделитель между центральным холстом с графиками и правой панелью управления (меню с лампочками и настройками) — таскаем мышкой влево/вправо для изменения ширины панели.
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

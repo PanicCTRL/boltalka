@@ -1,0 +1,21 @@
+
+The command exited with code 0.
+Output:
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'TODO_SIGNAL.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'candlestick_item.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'chart_canvas.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'run_signal.bat', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tick_loader.py', LF will be replaced by CRLF the next time Git touches it
+[main (root-commit) 14c52d3] feat(signal): stage 2 - candle parsing via Lua and high-performance pyqtgraph rendering
+ 8 files changed, 665 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 TODO_SIGNAL.md
+ create mode 100644 candlestick_item.py
+ create mode 100644 chart_canvas.py
+ create mode 100644 main.py
+ create mode 100644 run_signal.bat
+ create mode 100644 tick_loader.py
+ create mode 100644 tick_parser.lua
+

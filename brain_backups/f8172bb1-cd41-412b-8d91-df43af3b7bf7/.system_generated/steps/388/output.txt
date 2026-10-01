@@ -1,0 +1,12 @@
+
+The command exited with code 0.
+Output:
+
+Name              Length LastWriteTime     
+----              ------ -------------     
+.system_generated        30.09.2026 6:22:52
+.user_uploaded           30.09.2026 6:22:47
+scratch                  30.09.2026 6:22:46
+
+
+

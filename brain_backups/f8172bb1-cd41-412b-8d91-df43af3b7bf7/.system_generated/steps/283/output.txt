@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+Done in 0.243 sec. Generated 203 M5 candles!
+

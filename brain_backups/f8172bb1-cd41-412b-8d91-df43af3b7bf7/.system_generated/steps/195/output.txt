@@ -1,0 +1,10 @@
+
+The command exited with code 0.
+Output:
+
+Source                                                            Definition                                           
+------                                                            ----------                                           
+C:\Users\zuewe\AppData\Local\Programs\Python\Python312\python.exe C:\Users\zuewe\AppData\Local\Programs\Python\Pytho...
+
+
+

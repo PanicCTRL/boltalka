@@ -1,0 +1,5 @@
+
+The command exited with code 0.
+Output:
+Tick time:	065945	-> Bar M5:	06:55:00
+

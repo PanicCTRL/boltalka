@@ -1,0 +1,9 @@
+
+The command exited with code 0.
+Output:
+9ce10ac docs: mark Stage 2 items as completed in TODO_SIGNAL.md
+102bdbe feat: add tick_parser.lua to parse ticks into M5 candles and write price files
+071bf48 docs: mark Stage 1 as completed in TODO_SIGNAL.md
+63caefa feat: configure dedicated .venv and portable relative bat launcher
+5c38755 feat: add run_signal.bat launcher
+
