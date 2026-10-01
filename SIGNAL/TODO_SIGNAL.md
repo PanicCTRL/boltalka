@@ -58,10 +58,14 @@ Y:\SIGNAL\
 
 ---
 
-### [ ] ЭТАП 2: Загрузка и подготовка данных (`data_loader.py`)
-- [ ] 2.1. Написать парсер тиковых файлов Финама (`<TICKER>,<PER>,<DATE>,<TIME>,<LAST>,<VOL>`).
-- [ ] 2.2. Реализовать агрегацию тиков в 5-минутные свечи (M5: Open, High, Low, Close, Volume, Timestamp, bar_idx).
-- [ ] 2.3. Добавить сохранение / кэширование свечей в DataFrame для быстрой загрузки.
+### [x] ЭТАП 2: Загрузка и подготовка данных (`tick_parser.lua`) (Сделано)
+- [x] 2.1. Написать парсер тиковых файлов Финама (`<TICKER>,<PER>,<DATE>,<TIME>,<LAST>,<VOL>`) на чистом Lua (`tick_parser.lua`).
+- [x] 2.2. Реализовать агрегацию тиков в 5-минутные свечи (M5: Open, High, Low, Close, Volume, дата и время).
+- [x] 2.3. Реализовать автосохранение 4-х раздельных файлов с датой и временем свечи:
+  - `candles.txt` (date;time;open;high;low;close;volume)
+  - `high_prices.txt` (date;time;high)
+  - `low_prices.txt` (date;time;low)
+  - `close_prices.txt` (date;time;close)
 - [ ] 2.4. Поддержка склейки нескольких торговых дней подряд в единую историю.
 
 ---
